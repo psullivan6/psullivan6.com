@@ -2,6 +2,6 @@
 
 Yet another attempt at building my public web presence.
 
-- [TODO](./documentation/TODO.md)
+- [TODO](./app/routes/todos.mdx)
 - [Changelog](documentation/CHANGELOG.md)
 - [Ideas + Philosophies](documentation/IDEAS.md)
