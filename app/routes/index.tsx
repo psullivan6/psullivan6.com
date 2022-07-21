@@ -8,6 +8,9 @@ export default function Index() {
         <li>
           <Link to="/todos">TODOs</Link>
         </li>
+        <li>
+          <Link to="/playground/colors">Color Experiment</Link>
+        </li>
       </ul>
     </div>
   );
