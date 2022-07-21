@@ -1,0 +1,7 @@
+- Connect the domain to Vercel
+- Make this TODO into a route
+- Add cool dark-mode capable favicon
+- Add Tailwind CSS
+- Add iOS-friendly background color, so the bar behind the iPhone icons is the same color like the cool sites do it
+- Build an HTML elements with nuthin' else page (form inputs, typography, etc...)
+  - look at various examples of this that exist
