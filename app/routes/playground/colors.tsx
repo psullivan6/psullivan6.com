@@ -1,5 +1,7 @@
 import _sortBy from 'lodash/sortBy';
 import { parseToHsl, parseToRgb, readableColor } from 'polished';
+import type { FormEvent } from 'react';
+import { useState } from 'react';
 
 function deltaE(rgbA, rgbB) {
   let labA = rgb2lab(rgbA);
@@ -98,35 +100,120 @@ const sortedColorsList = _sortBy(complexColorsList, [
 ]);
 
 export default function Index() {
+  const [manualColors, setManualColors] = useState({
+    red: [],
+    orange: [],
+    yellow: [],
+    green: [],
+    blue: [],
+    purple: [],
+    gray: [],
+  });
+
+  const handleSubmit = (event: FormEvent) => {
+    event.preventDefault();
+    // const formdData = new FormData(event.target);
+    // formdData.get('color');
+    // console.log('event', formdData.get('color'), event);
+  };
+
+  // const handleClick = (event: FormEvent) => {
+  // event.target.style.backgroundColor = '#0000000f';
+  // event.target.style.color = '#ffffff0f';
+  // };
+
+  const handleButtonSubmit = (color: string) => (event: FormEvent) => {
+    const form = document.getElementById('form');
+
+    event.target.style.backgroundColor = '#0000000f';
+    event.target.style.color = '#ffffff0f';
+
+    const formdData = new FormData(form);
+    const colorCategory = formdData.get('color')?.toString() as keyof typeof manualColors;
+
+    console.log('');
+
+    setManualColors({
+      ...manualColors,
+      [colorCategory]: [...new Set([...manualColors[colorCategory], color])],
+    });
+  };
+
   return (
-    <div>
+    <form id="form" onSubmit={handleSubmit}>
       <h1>Color Experiment {colorsList.length} colors</h1>
+      <fieldset>
+        <ul>
+          <li>
+            <label>
+              <input type="radio" name="color" value="red" />
+              Red
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="color" value="orange" />
+              Orange
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="color" value="yellow" />
+              Yellow
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="color" value="green" />
+              Green
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="color" value="blue" />
+              Blue
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="color" value="purple" />
+              Purple
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type="radio" name="color" value="gray" />
+              Gray
+            </label>
+          </li>
+        </ul>
+      </fieldset>
       <div
         style={{
           display: 'grid',
           gap: '0.5rem',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(6rem, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(3rem, 1fr))',
         }}
       >
         {sortedColorsList.map(({ color }) => (
           <button
             key={color}
             style={{
-              // width: '3rem',
-              // height: '3rem',
-              padding: '1rem',
+              width: '3rem',
+              height: '3rem',
               borderRadius: '0.25rem',
               border: 'none',
               backgroundColor: color,
               color: readableColor(color),
             }}
+            type="submit"
+            onClick={handleButtonSubmit(color)}
           >
             {color}
-            <br />
-            {getColorCategory(color)}
           </button>
         ))}
       </div>
-    </div>
+      <pre>{JSON.stringify(manualColors, null, 2)}</pre>
+    </form>
   );
 }

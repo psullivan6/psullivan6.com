@@ -17,7 +17,7 @@
 - Connected to Google Domains via Vercel's `A` and `CNAME` record suggestions
 - Added my commonly used Prettier config file to enforce auto-formatting even though I have that set in VSCode already
 
-## [`latest`] - 2022-07-21
+## [`2b2841d`] - 2022-07-21
 
 - Moved the TODO.md document to an `.mdx` file and made it a route, so we can see it live on the site
 - revised the main index.tsx route to link to the TODOs route and use pertinent site info rather than the boilerplate
@@ -26,7 +26,17 @@
   - added `lodash` and `polished` to display the color experiment
 - revised the versioning logic to git commit hash only, since binding it to semver is tricky (this commit feels like a minor, whereas others felt like patches)
 
+## [`latest`] - 2022-07-22
+
+- added color experiment pages
+  - added logic to iterate over all "3-base" hex colors (colors using `0, 3, 6, 9, C, F`)
+  - added logic to the automatically generated color experiment page to manually categorize the colors (deltaE, etc... logic wasn't working well)
+  - added a manual colors experiment page to display the categorized colors
+- added a dark-mode / light-mode SVG favicon via the `prefers-color-scheme` media query
+- added start to a Logo experiment page with some custom CSS
+
 [`1d738cc`]: https://github.com/psullivan6/psullivan6.com/commit/1d738cc272c0484c2f709a38cdbed59d59107f4f
 [`7c51b00`]: https://github.com/psullivan6/psullivan6.com/commit/7c51b00b8e0e50684999668bfb0841acde95ce04
 [`797e928`]: https://github.com/psullivan6/psullivan6.com/commit/797e9286a119a2b87a554767e5ea5f177b5b10a8
+[`2b2841d`]: https://github.com/psullivan6/psullivan6.com/commit/2b2841d0dee8290cc77399f2b34ad2336217e532
 [`latest`]: https://github.com/psullivan6/psullivan6.com
