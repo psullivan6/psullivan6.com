@@ -1,4 +1,4 @@
-import _sortBy from 'lodash/sortBy';
+import _sortBy from 'lodash-es/sortBy';
 import { parseToHsl, parseToRgb, readableColor } from 'polished';
 import type { FormEvent } from 'react';
 import { useState } from 'react';
