@@ -26,7 +26,7 @@
   - added `lodash` and `polished` to display the color experiment
 - revised the versioning logic to git commit hash only, since binding it to semver is tricky (this commit feels like a minor, whereas others felt like patches)
 
-## [`latest`] - 2022-07-22
+## [`9d1d91d`] - 2022-07-22
 
 - added color experiment pages
   - added logic to iterate over all "3-base" hex colors (colors using `0, 3, 6, 9, C, F`)
@@ -35,8 +35,15 @@
 - added a dark-mode / light-mode SVG favicon via the `prefers-color-scheme` media query
 - added start to a Logo experiment page with some custom CSS
 
+## [`latest`] - 2024-03-27
+
+- revised the build system to use the latest version of Remix, which includes vite
+  - revised the routing based on the updated requirements
+- added a basic Navigation component
+
 [`1d738cc`]: https://github.com/psullivan6/psullivan6.com/commit/1d738cc272c0484c2f709a38cdbed59d59107f4f
 [`7c51b00`]: https://github.com/psullivan6/psullivan6.com/commit/7c51b00b8e0e50684999668bfb0841acde95ce04
 [`797e928`]: https://github.com/psullivan6/psullivan6.com/commit/797e9286a119a2b87a554767e5ea5f177b5b10a8
 [`2b2841d`]: https://github.com/psullivan6/psullivan6.com/commit/2b2841d0dee8290cc77399f2b34ad2336217e532
+[`9d1d91d`]: https://github.com/psullivan6/psullivan6.com/commit/9d1d91dea8a260af9c39ddc5a02b058a73366a87
 [`latest`]: https://github.com/psullivan6/psullivan6.com

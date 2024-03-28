@@ -1,0 +1,11 @@
+.Navigation-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.Navigation--isActive {
+  padding: 1rem;
+  border: 1px solid black;
+}
