@@ -25,8 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.className} dark:bg-slate-950 bg-white`}>
-      <body className="antialiased tracking-tight">
-        <main className="prose prose-slate lg:prose-xl dark:prose-invert mx-auto my-6 p-6">
+      <body className="antialiased">
+        <main className="prose prose-slate lg:prose-lg xl:prose-xl dark:prose-invert mx-auto my-6 p-6">
           {children}
         </main>
         <footer>Fun Stuff here, like a copyright with the wrong year</footer>
