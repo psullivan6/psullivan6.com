@@ -1,16 +1,51 @@
+import bioContent from '@/content/bio.json';
+import heroContent from '@/content/hero.json';
 import Lowes from '@/experience/lowes.mdx';
 import UofO from '@/experience/university-of-oregon.mdx';
 
-# Patrick Sullivan
+<header className="not-prose">
+  <h1 className="font-mono text-center uppercase text-md font-medium tracking-widest text-sky-500">
+    Patrick Sullivan
+  </h1>
+</header>
 
-This is my portfolio, blog, and personal website.
+<section className="my-40">
+  <h2
+    className="!text-[4em]/[1.1em]"
+    dangerouslySetInnerHTML={{ __html: heroContent.default.title }}
+  />
+  <span className="text-xs">Yet another list of 3 things</span>
+</section>
 
-## Experience
+<div>
+<h2 className="sticky top-0 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest text-sky-600 uppercase dark:text-sky-400 bg-slate-950/50 backdrop-blur-lg">
+  {bioContent.default.label}
+</h2>
 
-<section className="mb-24 prose-h3:mb-0">
+{bioContent.default.content.map((contentLine) => {
+return (
+
+<p key={contentLine}>{contentLine}</p>
+)})}
+
+</div>
+
+<div>
+<h2 className="sticky top-0 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest text-sky-600 uppercase dark:text-sky-400 bg-slate-950/50 backdrop-blur-lg">Things I&rsquo;ve been paid to do</h2>
+
+<section className="mb-24">
   <Lowes />
 </section>
+
+<p>More stuff here</p>
 
 <section className="mb-24">
   <UofO />
 </section>
+</div>
+
+<h2 className="sticky top-0 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest text-sky-600 uppercase dark:text-sky-400 bg-slate-950/50 backdrop-blur-lg">
+  {'Projects'}
+</h2>
+
+### Coming soon!

@@ -17,13 +17,11 @@ Stop writing five nested guards:
 
 ```js
 // Old
-const theme = user && user.settings && user.settings.theme
-  ? user.settings.theme
-  : 'light';
+const theme = user && user.settings && user.settings.theme ? user.settings.theme : 'light';
 
 // New
 const theme = user?.settings?.theme ?? 'light';
-````
+```
 
 Fewer lines, same safety.
 
@@ -77,19 +75,25 @@ const escape = (strings, ...values) =>
       acc +
       str +
       (values[i]
-        ? String(values[i]).replace(/[&<>"']/g, (s) => ({
-            '&': '&amp;',
-            '<': '&lt;',
-            '>': '&gt;',
-            '"': '&quot;',
-            "'": '&#39;',
-          })[s])
+        ? String(values[i]).replace(
+            /[&<>"']/g,
+            (s) =>
+              ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;',
+              }[s])
+          )
         : ''),
-    '',
+    ''
   );
 
 const name = '<script>alert(1)</script>';
 document.body.innerHTML = escape`<p>Hello, ${name}!</p>`;
+const fooBarBaz =
+  'foo bar baz lorem ipsum dolor sit amet and more and things and stuff. More words and things and additional content to ensure the string is long enough to demonstrate the escaping functionality.';
 ```
 
 Zero dependencies, maximum safety.
