@@ -112,3 +112,8 @@ table {
   white-space: nowrap;
   text-align: left;
 }
+
+::selection {
+  color: var(--color-orange-50);
+  background: var(--color-sky-600);
+}
