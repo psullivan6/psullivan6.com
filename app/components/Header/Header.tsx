@@ -1,25 +1,100 @@
 'use client';
 
-import { CircleDot, Donut } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+import headerContent from '@/content/header.json';
+import { Beer, GlassWater, Laptop, Moon, Sun } from 'lucide-react';
+import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
 import { useContentContext } from '../ContentProvider/ContentProvider';
 
 const Header = () => {
-  const { toggleTone, tone } = useContentContext();
+  const { setTone, tone } = useContentContext();
+  const { theme, setTheme } = useTheme();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToneChange = (newTone: string) => {
+    setTone(newTone as 'default' | 'snarky');
+  };
+
+  useEffect(() => {
+    const keydownHandler = (e: KeyboardEvent) => {
+      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
+        e.preventDefault();
+        setIsOpen((open) => !open);
+      }
+    };
+
+    document.addEventListener('keydown', keydownHandler);
+    return () => document.removeEventListener('keydown', keydownHandler);
+  }, []);
 
   return (
-    <header className="not-prose p-6 flex justify-between items-center">
-      <div className="size-8" />
-
-      <h1 className="font-mono text-center uppercase text-md font-medium tracking-widest text-sky-500">
+    <header className="sticky top-0 z-20 bg-background border-b not-prose text-base lg:text-lg xl:text-xl max-w-[65ch] mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 className="font-mono text-center uppercase text-base font-medium tracking-widest text-sky-600 dark:text-sky-400">
         Patrick Sullivan
       </h1>
 
-      <button
-        className="text-red-500 cursor-pointer hover:bg-red-950 p-1 rounded-full"
-        onClick={toggleTone}
-      >
-        {tone === 'default' ? <CircleDot /> : <Donut />}
-      </button>
+      <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
+        <DropdownMenuTrigger asChild>
+          <Button variant="outline">
+            {headerContent[tone].menu} <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+          </Button>
+        </DropdownMenuTrigger>
+
+        <DropdownMenuContent className="w-56" align="end">
+          <DropdownMenuLabel>Themes</DropdownMenuLabel>
+
+          <DropdownMenuRadioGroup value={theme} onValueChange={setTheme}>
+            <DropdownMenuRadioItem value="dark">
+              Dark
+              <DropdownMenuShortcut>
+                <Moon />
+              </DropdownMenuShortcut>
+            </DropdownMenuRadioItem>
+            <DropdownMenuRadioItem value="light">
+              Light
+              <DropdownMenuShortcut>
+                <Sun />
+              </DropdownMenuShortcut>
+            </DropdownMenuRadioItem>
+            <DropdownMenuRadioItem value="system">
+              System
+              <DropdownMenuShortcut>
+                <Laptop />
+              </DropdownMenuShortcut>
+            </DropdownMenuRadioItem>
+          </DropdownMenuRadioGroup>
+
+          <DropdownMenuSeparator />
+
+          <DropdownMenuLabel>Wording</DropdownMenuLabel>
+
+          <DropdownMenuRadioGroup value={tone} onValueChange={handleToneChange}>
+            <DropdownMenuRadioItem value="default">
+              Normal
+              <DropdownMenuShortcut>
+                <GlassWater />
+              </DropdownMenuShortcut>
+            </DropdownMenuRadioItem>
+            <DropdownMenuRadioItem value="snarky">
+              Snarky
+              <DropdownMenuShortcut>
+                <Beer />
+              </DropdownMenuShortcut>
+            </DropdownMenuRadioItem>
+          </DropdownMenuRadioGroup>
+        </DropdownMenuContent>
+      </DropdownMenu>
     </header>
   );
 };

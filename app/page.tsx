@@ -5,7 +5,10 @@ import experiencesContent from '@/content/experience.json';
 import heroContent from '@/content/hero.json';
 import Lowes from '@/experience/lowes.mdx';
 import UofO from '@/experience/university-of-oregon.mdx';
+import { Lato } from 'next/font/google';
 import { useContentContext } from './components/ContentProvider/ContentProvider';
+
+const lato = Lato({ subsets: ['latin', 'latin-ext'], weight: ['400', '900'] });
 
 const HomePage = () => {
   const { tone } = useContentContext();
@@ -13,14 +16,14 @@ const HomePage = () => {
     <>
       <section className="my-40">
         <h2
-          className="!text-[4em]/[1.1em]"
+          className={`${lato.className} !text-[4em]/[1.1em] font-black`}
           dangerouslySetInnerHTML={{ __html: heroContent[tone].title }}
         />
       </section>
 
       <div>
         <h2
-          className="sticky top-0 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
+          className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
           dangerouslySetInnerHTML={{ __html: bioContent[tone].label }}
         />
 
@@ -31,7 +34,7 @@ const HomePage = () => {
 
       <div>
         <h2
-          className="sticky top-0 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
+          className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
           dangerouslySetInnerHTML={{ __html: experiencesContent[tone].label }}
         />
 
@@ -46,7 +49,7 @@ const HomePage = () => {
         </section>
       </div>
 
-      <h2 className="sticky top-0 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg">
+      <h2 className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg">
         Projects
       </h2>
 

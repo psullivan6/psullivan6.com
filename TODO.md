@@ -1,0 +1,3 @@
+- [ ] Finish the resume section
+- [ ] Add an open-source / free analytics tool
+- [ ] Add blog section and posts (format with mdx and code snippets)
