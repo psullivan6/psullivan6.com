@@ -14,6 +14,7 @@ import {
 import headerContent from '@/content/header.json';
 import { Beer, GlassWater, Laptop, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useContentContext } from '../ContentProvider/ContentProvider';
 
@@ -40,9 +41,11 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-20 bg-background border-b not-prose text-base lg:text-lg xl:text-xl max-w-[65ch] mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 className="font-mono text-center uppercase text-base font-medium tracking-widest text-sky-600 dark:text-sky-400">
-        Patrick Sullivan
-      </h1>
+      <Link href="/">
+        <h1 className="font-mono text-center uppercase text-base font-medium tracking-widest text-sky-600 dark:text-sky-400">
+          Patrick Sullivan
+        </h1>
+      </Link>
 
       <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger asChild>

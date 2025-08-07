@@ -12,6 +12,7 @@ const lato = Lato({ subsets: ['latin', 'latin-ext'], weight: ['400', '900'] });
 
 const HomePage = () => {
   const { tone } = useContentContext();
+
   return (
     <>
       <section className="my-40">
