@@ -1,0 +1,10 @@
+{
+  "default": {
+    "title": "Page Not Found",
+    "button": "Return Home"
+  },
+  "snarky": {
+    "title": "Stahp Trying to Hack Me",
+    "button": "Get Outta Here"
+  }
+}

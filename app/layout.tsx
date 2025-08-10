@@ -44,11 +44,7 @@ export default function RootLayout({
           <ContentProvider>
             <Header />
 
-            <main className="relative z-10 dark:bg-slate-950 bg-orange-50 min-h-screen shadow-xl">
-              <div className="prose prose-slate lg:prose-lg xl:prose-xl dark:prose-invert prose-headings:mb-0 mx-auto p-6 ">
-                {children}
-              </div>
-            </main>
+            {children}
 
             <Footer />
             <Analytics />

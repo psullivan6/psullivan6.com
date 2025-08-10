@@ -80,7 +80,7 @@ const Header = () => {
 
           <DropdownMenuSeparator />
 
-          <DropdownMenuLabel>Wording</DropdownMenuLabel>
+          <DropdownMenuLabel>Copy Tone</DropdownMenuLabel>
 
           <DropdownMenuRadioGroup value={tone} onValueChange={handleToneChange}>
             <DropdownMenuRadioItem value="default">
