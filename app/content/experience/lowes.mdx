@@ -1,33 +1,57 @@
+import ExperienceItem from '@/components/ExperienceItem/ExperienceItem';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+
 <header className='flex items-end justify-between prose-h3:mt-4'>
 ### Lowe&rsquo;s
 
-<span className="text-[0.75em] dark:text-slate-500">June 2020 - Current &mdash; 5 years</span>
+<span className="text-[0.75em] dark:text-slate-500">June 2020 &ndash; Current (5 years)</span>
 
 </header>
 
 Lowe's is a Fortune 50 home improvement retailer serving millions of customers across North America. The company leverages technology to drive innovation, streamline operations, and deliver seamless digital experiences for its customers and associates.
 
-<header className='flex items-end justify-between'>
-#### Lead Software Engineer
+<ExperienceItem
+  header={
+    <>
+      Lead Software Engineer
+      <span className="text-[0.75em] dark:text-slate-500">
+        February 2022 &ndash; Current
+      </span>
+    </>
+  }
+>
 
-<span className="text-[0.75em] dark:text-slate-500">February 2022 - Current &mdash; 3.5 years</span>
+- Serve as product & project manager &mdash; strategizing, planning, and leading a cross-disciplinary team to deliver product and customer service excellence, business objective compliance, and leadership reporting
+- Build and maintain an enterprise design system (React component library, docs, plugins), increasing efficiency and enforcing brand and UI/UX standards compliance across 250+ apps
+- Create and deliver several key initiatives by developing partnerships across organizations and disciplines
 
-</header>
+</ExperienceItem>
 
-- Served as pseudo-product and project manager &mdash; strategizing, planning, and leading a cross-disciplinary team of engineers, designers, and content strategists
-- Built and maintained several versions of an enterprise design system, including a React component library, comprehensive documentation site, integrated CMS, and associated design plugins
-- Created and delivered several key initiatives by developing partnerships across multiple organizations and disciplines
-- Established and expanded processes for ongoing support, feedback, and adoption across multiple product teams
+<ExperienceItem
+  header={
+    <>
+      Senior Software Engineer
+      <span className="text-[0.75em] dark:text-slate-500">June 2021 &ndash; February 2022</span>
+    </>
+  }
+>
+  - Established and implemented an org-level micro-frontend architecture to enhance long-term scalability and improve developer onboarding, defect resolution time, and feature release cycles
+  - Built and maintained consumer-facing web applications processing $100K+ per month in revenue
+  - Ensured product stability and seamless releases by evolving and managing DevOps processes: CI/CD, vulnerability, defect and risk mitigation, production readiness & release strategizing, and on-call handling
 
-#### Senior Software Engineer
+</ExperienceItem>
 
-June 2021 - February 2022
+<ExperienceItem header={<>
+Software Engineer
+<span className="text-[0.75em] dark:text-slate-500">June 2020 &ndash; June 2021</span>
+</>}>
 
-- Established and implemented a micro-frontend architecture to enhance scalability and maintainability across multiple teams
-- Built and maintained consumer-facing web applications
+- Developed and guided the delivery of enterprise apps, increasing labor savings and ease of use
+- Designed and documented processes to improve developer experience, efficiency, and accuracy
 
-#### Software Engineer
-
-June 2020 - June 2021
-
-- Developed and maintained web applications using React
+</ExperienceItem>

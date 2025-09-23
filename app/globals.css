@@ -2,10 +2,12 @@
 @import 'tw-animate-css';
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
 @plugin "@tailwindcss/typography";
 
 @theme {
   --font-family-sans: 'Inter', sans-serif;
+  --breakpoint-xs: 30rem;
 }
 
 :root {
