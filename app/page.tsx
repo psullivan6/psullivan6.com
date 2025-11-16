@@ -3,16 +3,19 @@
 import bioContent from '@/content/bio.json';
 import experiencesContent from '@/content/experience.json';
 import Lowes from '@/content/experience/lowes.mdx';
+import Pac12Conference from '@/content/experience/pac-12-conference.mdx';
+import Struck from '@/content/experience/struck.mdx';
+import TheRegisterGuard from '@/content/experience/the-register-guard.mdx';
+import Union from '@/content/experience/union.mdx';
+
 import UofO from '@/content/experience/university-of-oregon.mdx';
 import heroContent from '@/content/hero.json';
 import ProjectsUIScorecards from '@/content/projects/ui-scorecards.mdx';
 import TechAndTools from '@/content/technologies.mdx';
-import { Lato } from 'next/font/google';
 import Link from 'next/link';
 import { useContentContext } from './components/ContentProvider/ContentProvider';
 import { Button } from './components/ui/button';
-
-const lato = Lato({ subsets: ['latin', 'latin-ext'], weight: ['400', '900'] });
+import { lato } from './utilities/fonts';
 
 const HomePage = () => {
   const { tone } = useContentContext();
@@ -69,12 +72,22 @@ const HomePage = () => {
             dangerouslySetInnerHTML={{ __html: experiencesContent[tone].label }}
           />
 
-          <section className="mb-24">
-            <Lowes />
-
-            <br />
-
-            <p>And More &hellip;</p>
+          <section className="mb-24 group experience">
+            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
+              <Lowes />
+            </div>
+            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
+              <Union />
+            </div>
+            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
+              <Struck />
+            </div>
+            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
+              <TheRegisterGuard />
+            </div>
+            <div className="mb-18">
+              <Pac12Conference />
+            </div>
           </section>
 
           {/* <section className="mb-24">
@@ -94,12 +107,12 @@ const HomePage = () => {
 
         <p>
           I've used many technologies and tools over my career, ranging from ActionScript in Flash
-          to vite and Tailwind CSS. I'm eager to learn and confident in my ability to adopt new
-          technologies and tools. Here's a lst of the ones I'm actively using and some I've used
-          recently.
+          to a custom-built MCP Server and Tailwind CSS. I'm eager to learn and confident in my
+          ability to adopt new technologies and tools. Here's a lst of the ones I'm actively using
+          and some I've used recently.
         </p>
 
-        <div className="text-sm columns-1 xs:columns-2 md:columns-3 ">
+        <div className="text-[0.75em] columns-1 xs:columns-2 md:columns-3 ">
           <TechAndTools />
         </div>
       </div>
