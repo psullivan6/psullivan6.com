@@ -23,6 +23,18 @@ const HomePage = () => {
   return (
     <main className="relative z-10 dark:bg-slate-950 bg-orange-50 min-h-[calc(100vh-69px)] shadow-xl">
       <div className="prose prose-slate lg:prose-lg xl:prose-xl dark:prose-invert prose-headings:mb-0 mx-auto p-6">
+        <nav className="fixed top-1/3 -translate-y-1/2 right-20 p-4 border-2 text-sm">
+          <ul>
+            <li>
+              <Link href="#bio">Bio</Link>
+            </li>
+            <li>
+              <Link href="#experience">Experience</Link>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Hero Title Section */}
         <section className="my-40">
           <h2
             className={`${lato.className} !text-[4em]/[1.1em] font-black`}
@@ -55,8 +67,10 @@ const HomePage = () => {
           </div>
         </section>
 
+        {/* Bio Section */}
         <div>
           <h2
+            id="bio"
             className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
             dangerouslySetInnerHTML={{ __html: bioContent[tone].label }}
           />
@@ -66,15 +80,18 @@ const HomePage = () => {
           })}
         </div>
 
+        {/* Experience Section */}
         <div>
           <h2
+            id="experience"
             className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
             dangerouslySetInnerHTML={{ __html: experiencesContent[tone].label }}
           />
 
           <section className="mb-24 group experience">
             <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
-              <Lowes />
+              {/* @ts-ignore - mdx.d.ts file doesn't resolve this */}
+              <Lowes tone={tone} />
             </div>
             <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
               <Union />
@@ -93,6 +110,16 @@ const HomePage = () => {
           {/* <section className="mb-24">
             <UofO />
           </section> */}
+        </div>
+
+        {/* Education Section */}
+        <div>
+          <h2
+            id="education"
+            className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
+            dangerouslySetInnerHTML={{ __html: experiencesContent[tone].label }}
+          />
+          <UofO />
         </div>
 
         {/* <h2 className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg">

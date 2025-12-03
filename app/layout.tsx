@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} dark:bg-slate-950 bg-orange-50`}
+      className={`${inter.className} dark:bg-slate-950 bg-orange-50 scroll-smooth scroll-pt-30`}
       suppressHydrationWarning
     >
       <body className="antialiased">

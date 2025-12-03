@@ -1,3 +1,5 @@
+import If from '../../components/If';
+
 export const metadata = {
   title: "Experience | Lowe's",
   alternates: {
@@ -9,7 +11,15 @@ export const metadata = {
 
 June 2020 - Current (5 years)
 
-Lowe's is a Fortune 50 home improvement retailer serving millions of customers across North America. The company leverages technology to drive innovation, streamline operations, and deliver seamless digital experiences for its customers and associates.
+<If condition={props.tone === 'default'}>
+  Lowe's is a Fortune 50 home improvement retailer serving millions of customers across North
+  America. The company leverages technology to drive innovation, streamline operations, and deliver
+  seamless digital experiences for its customers and associates.
+</If>
+<If condition={props.tone === 'snarky'}>
+  Lowe&rsquo;s Knows ... how to help me stock my garage full of tools I only sometimes use and build
+  libraries for people that build apps for people that serve customers that buy stuff.
+</If>
 
 ## Lead Software Engineer
 

@@ -2,7 +2,7 @@
 
 import { createContext, ReactNode, useContext, useState } from 'react';
 
-type ContentContextType = {
+export type ContentContextType = {
   tone: 'default' | 'snarky';
   setTone: (tone: 'default' | 'snarky') => void;
   toggleTone: () => void;
