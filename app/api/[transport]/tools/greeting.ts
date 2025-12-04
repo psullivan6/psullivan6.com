@@ -11,15 +11,32 @@ export const registerGreetingTool = (server: McpServer) => {
       inputSchema: {
         name: z.string().describe('Name of person to greet'),
       },
+      outputSchema: {
+        salutation: z.string(),
+        content: z.array(z.string()),
+        suggestedFollowupTopics: z.array(z.string()),
+      },
     },
     async ({ name }) => {
+      const output = {
+        salutation: `Hi ${name} 👋`,
+        content: ['Thanks for using the Patrick MCP', 'Ask me about real Patrick.'],
+        suggestedFollowupTopics: [
+          'professional experience',
+          'personal hobbies',
+          'sports preferences',
+          'biography',
+        ],
+      };
+
       return {
         content: [
           {
             type: 'text',
-            text: `Hi ${name} 👋, thanks for using the Patrick MCP. Ask me about real Patrick, including his professional experience, personal hobbies, and more.`,
+            text: JSON.stringify(output),
           },
         ],
+        structuredContent: output,
       };
     }
   );
