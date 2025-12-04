@@ -2,13 +2,8 @@ import { createMcpHandler } from 'mcp-handler';
 import { registerResources } from './resources';
 
 const handler = createMcpHandler(
-  async (server) => {
+  (server) => {
     registerResources(server);
-
-    await server.sendLoggingMessage({
-      level: 'debug',
-      data: `Started the MCP SERVER`,
-    });
   },
   {
     capabilities: {
