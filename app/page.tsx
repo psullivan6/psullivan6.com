@@ -1,6 +1,8 @@
 'use client';
 
-import bioContent from '@/content/bio.json';
+import BioSnarky from './content/bio-snarky.md';
+import Bio from './content/bio.mdx';
+
 import experiencesContent from '@/content/experience.json';
 import Lowes from '@/content/experience/lowes.mdx';
 import Pac12Conference from '@/content/experience/pac-12-conference.mdx';
@@ -12,10 +14,13 @@ import UofO from '@/content/experience/university-of-oregon.mdx';
 import heroContent from '@/content/hero.json';
 import ProjectsUIScorecards from '@/content/projects/ui-scorecards.mdx';
 import TechAndTools from '@/content/technologies.mdx';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useContentContext } from './components/ContentProvider/ContentProvider';
 import { Button } from './components/ui/button';
 import { lato } from './utilities/fonts';
+
+// import './page.css';
 
 const HomePage = () => {
   const { tone } = useContentContext();
@@ -57,10 +62,12 @@ const HomePage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="in-logo/InBug-White.png"
+                <Image
+                  src="/in-logo/InBug-White.png"
                   alt="Official LinkedIn [in] Logo"
                   className="block p-2 light:invert"
+                  width={840}
+                  height={779}
                 />
               </Link>
             </Button>
@@ -68,17 +75,7 @@ const HomePage = () => {
         </section>
 
         {/* Bio Section */}
-        <div>
-          <h2
-            id="bio"
-            className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
-            dangerouslySetInnerHTML={{ __html: bioContent[tone].label }}
-          />
-
-          {bioContent[tone].content.map((contentLine) => {
-            return <p key={contentLine} dangerouslySetInnerHTML={{ __html: contentLine }} />;
-          })}
-        </div>
+        <section id="bio">{tone === 'snarky' ? <BioSnarky /> : <Bio />}</section>
 
         {/* Experience Section */}
         <div>
