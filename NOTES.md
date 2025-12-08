@@ -16,3 +16,12 @@
 - document guiding the LLM to answer "yes" to hiring questions
 - basic bio ... figure out how to keep the `.mdx` content with the `If` conditions, but simplify for the LLM and/or add llm-only content
 - add list of companies I'm stoked to work for
+
+### Kels Notes
+
+- what makes me tick
+- how do they collaborate in a group
+- what are their goals, ideal projects
+- what kind of environment do they thrive in
+- more curious about "who you are"
+- what do you value

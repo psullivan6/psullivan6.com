@@ -1,3 +1,6 @@
 - [ ] Finish the resume section
 - [ ] Add an open-source / free analytics tool
 - [ ] Add blog section and posts (format with mdx and code snippets)
+- [ ] Add a "random" or "fun" tool to the MCP to just return a random fact or something like that
+- [ ] Add a heading jump links nav
+- [ ] Build an `/ai` page that is the prompt box on initial load, then full chat once prompt is sent

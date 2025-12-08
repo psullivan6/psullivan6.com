@@ -11,7 +11,6 @@ type BlockquoteProps = ComponentPropsWithoutRef<'blockquote'>;
 
 const components = {
   h1: (props: HeadingProps) => {
-    console.log('component props - h1', props);
     return (
       <h1
         className={`${lato.className} group-[.experience]:text-[2.25em] group-[.experience]:my-0

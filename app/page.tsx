@@ -16,6 +16,7 @@ import ProjectsUIScorecards from '@/content/projects/ui-scorecards.mdx';
 import TechAndTools from '@/content/technologies.mdx';
 import Image from 'next/image';
 import Link from 'next/link';
+import AiDialogSection from './components/AiDialogSection/AiDialogSection';
 import { useContentContext } from './components/ContentProvider/ContentProvider';
 import { Button } from './components/ui/button';
 import { lato } from './utilities/fonts';
@@ -26,19 +27,8 @@ const HomePage = () => {
   const { tone } = useContentContext();
 
   return (
-    <main className="relative z-10 dark:bg-slate-950 bg-orange-50 min-h-[calc(100vh-69px)] shadow-xl">
+    <main className="relative z-10 bg-background min-h-[calc(100vh-69px)] shadow-xl">
       <div className="prose prose-slate lg:prose-lg xl:prose-xl dark:prose-invert prose-headings:mb-0 mx-auto p-6">
-        <nav className="fixed top-1/3 -translate-y-1/2 right-20 p-4 border-2 text-sm">
-          <ul>
-            <li>
-              <Link href="#bio">Bio</Link>
-            </li>
-            <li>
-              <Link href="#experience">Experience</Link>
-            </li>
-          </ul>
-        </nav>
-
         {/* Hero Title Section */}
         <section className="my-40">
           <h2
@@ -74,6 +64,9 @@ const HomePage = () => {
           </div>
         </section>
 
+        {/* AI Client Section */}
+        <AiDialogSection />
+
         {/* Bio Section */}
         <section id="bio">{tone === 'snarky' ? <BioSnarky /> : <Bio />}</section>
 
@@ -81,7 +74,7 @@ const HomePage = () => {
         <div>
           <h2
             id="experience"
-            className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
+            className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-background/50 backdrop-blur-lg"
             dangerouslySetInnerHTML={{ __html: experiencesContent[tone].label }}
           />
 
@@ -113,19 +106,19 @@ const HomePage = () => {
         <div>
           <h2
             id="education"
-            className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg"
+            className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-background/50 backdrop-blur-lg"
             dangerouslySetInnerHTML={{ __html: experiencesContent[tone].label }}
           />
           <UofO />
         </div>
 
-        {/* <h2 className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg">
+        {/* <h2 className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-background/50 backdrop-blur-lg">
           Featured Projects
         </h2>
 
         <ProjectsUIScorecards /> */}
 
-        <h2 className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-orange-50/50 dark:bg-slate-950/50 backdrop-blur-lg">
+        <h2 className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-background/50 backdrop-blur-lg">
           Technologies & Tools
         </h2>
 
