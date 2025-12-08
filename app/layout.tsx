@@ -1,4 +1,5 @@
 import Header from '@/components/Header/Header';
+import { Toaster } from '@/components/ui/sonner';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
@@ -47,8 +48,10 @@ export default function RootLayout({
             {children}
 
             <Footer />
+
             <Analytics />
             <SpeedInsights />
+            <Toaster />
           </ContentProvider>
         </ColorModeProvider>
       </body>

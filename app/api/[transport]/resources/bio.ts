@@ -1,5 +1,5 @@
+import { getResourceContent } from '@/utilities/get-resource-content';
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
-import { getResourceContent } from '../utilities/get-resource-content';
 
 export const registerBiographyResource = (server: McpServer) => {
   server.registerResource(

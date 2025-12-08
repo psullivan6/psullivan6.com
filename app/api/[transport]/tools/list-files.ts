@@ -1,5 +1,6 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import type { CallToolResult, ResourceLink } from '@modelcontextprotocol/sdk/types.js';
+import { z } from 'zod/v4';
 
 export const registerListFilesTool = (server: McpServer) => {
   server.registerTool(
@@ -7,6 +8,7 @@ export const registerListFilesTool = (server: McpServer) => {
     {
       title: 'List Available Resources as ResourceLinks',
       description: 'Returns a list of resource files as ResourceLinks',
+      inputSchema: z.object({}),
     },
     async (): Promise<CallToolResult> => {
       const resourceLinks: ResourceLink[] = [

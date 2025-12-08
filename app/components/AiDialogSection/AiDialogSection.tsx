@@ -5,28 +5,37 @@ import {
   InputGroupTextarea,
 } from '@/components/ui/input-group';
 import { Kbd, KbdGroup } from '@/components/ui/kbd';
-import { useForm } from '@tanstack/react-form';
+import { useChat } from '@ai-sdk/react';
+import { useForm } from '@tanstack/react-form-nextjs';
 import { ArrowUp, LoaderCircle } from 'lucide-react';
 import { KeyboardEventHandler, useEffect, useRef } from 'react';
+import { toast } from 'sonner';
+import AiChat from './AIChat';
 
 const AiDialogSection = () => {
+  const { messages, sendMessage } = useChat({
+    onError: (err) => toast.error(err.message),
+  });
+
   const promptRef = useRef<HTMLTextAreaElement | null>(null);
-  const tForm = useForm({
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const tsForm = useForm({
     defaultValues: {
       prompt: '',
-      lastName: '',
     },
-    onSubmit: async ({ value }) => {
-      // Do something with form data
-      console.log(value);
+    onSubmit: async ({ formApi, value: { prompt } }) => {
+      sendMessage({ text: prompt });
+      formApi.reset();
     },
   });
 
   const handleTextareaKeyDown: KeyboardEventHandler = (event) => {
     if (event.key === 'Enter' && !event.shiftKey) {
       event.preventDefault();
-      console.log('tForm', tForm);
-      tForm.handleSubmit();
+
+      if (formRef.current) {
+        formRef.current.requestSubmit();
+      }
     }
   };
 
@@ -46,16 +55,19 @@ const AiDialogSection = () => {
 
   return (
     <section className="mx-24">
+      <AiChat messages={messages} />
+
       <form
-        className="col-span-2"
+        ref={formRef}
         onSubmit={(e) => {
           e.preventDefault();
           e.stopPropagation();
-          tForm.handleSubmit();
+          tsForm.handleSubmit();
         }}
+        className="col-span-2"
       >
         <InputGroup className="rounded-3xl !bg-background items-end">
-          <tForm.Field
+          <tsForm.Field
             name="prompt"
             validators={{
               onChange: ({ value }) => (value === '' ? 'Please enter a prompt' : undefined),
@@ -73,9 +85,9 @@ const AiDialogSection = () => {
                 onKeyDown={handleTextareaKeyDown}
               />
             )}
-          </tForm.Field>
+          </tsForm.Field>
           <InputGroupAddon align="inline-end" className="p-2.5 [&&]:mr-0">
-            <tForm.Subscribe
+            <tsForm.Subscribe
               selector={(state) => [state.canSubmit, state.isSubmitting, state.isPristine]}
             >
               {([canSubmit, isSubmitting, isPristine]) => (
@@ -90,7 +102,7 @@ const AiDialogSection = () => {
                   <span className="sr-only">Send</span>
                 </InputGroupButton>
               )}
-            </tForm.Subscribe>
+            </tsForm.Subscribe>
           </InputGroupAddon>
         </InputGroup>
       </form>
