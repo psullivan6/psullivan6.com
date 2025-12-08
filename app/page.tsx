@@ -37,7 +37,7 @@ const HomePage = () => {
           />
 
           <div className="flex items-center gap-4 [&&]:mt-6 mb-12">
-            <Button variant="primary" asChild>
+            <Button asChild>
               <Link
                 href="Patrick Sullivan - Resume 2025.pdf"
                 target="_blank"
