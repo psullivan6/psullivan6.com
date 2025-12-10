@@ -20,5 +20,11 @@ export const getResourceContent = ({ filePath, tone }: GetResourceContentProps) 
   const parsedFilePath = format(filePathWithTone);
   const resourcePath = resolve(CONTENT_DIRECTORY, parsedFilePath);
 
+  /**
+   *
+   * TODO - add logic here to pull metadata, like years worked, position titles more declaratively
+   *
+   */
+
   return readFileSync(resourcePath, 'utf8');
 };

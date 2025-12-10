@@ -10,22 +10,22 @@ type AnchorProps = ComponentPropsWithoutRef<'a'>;
 type BlockquoteProps = ComponentPropsWithoutRef<'blockquote'>;
 
 const components = {
-  h1: (props: HeadingProps) => {
-    return (
-      <h1
-        className={`${lato.className} group-[.experience]:text-[2.25em] group-[.experience]:my-0
-        group-[.experience]:[&+p]:my-2 group-[.experience]:[&+p]:tracking-widest group-[.experience]:[&+p]:text-[0.75em] group-[.experience]:[&+p]:uppercase`}
-        {...props}
-      />
-    );
-  },
-  h2: (props: HeadingProps) => (
-    <h2
-      className={`group-[.experience]:text-[1.5em]
-        group-[.experience]:[&+p]:my-2 group-[.experience]:[&+p]:tracking-widest group-[.experience]:[&+p]:text-[0.75em] group-[.experience]:[&+p]:uppercase`}
-      {...props}
-    />
-  ),
+  // h1: (props: HeadingProps) => {
+  //   return (
+  //     <h1
+  //       className={`${lato.className} group-[.experience]:text-[2.25em] group-[.experience]:my-0
+  //       group-[.experience]:[&+p]:my-2 group-[.experience]:[&+p]:tracking-widest group-[.experience]:[&+p]:text-[0.75em] group-[.experience]:[&+p]:uppercase`}
+  //       {...props}
+  //     />
+  //   );
+  // },
+  // h2: (props: HeadingProps) => (
+  //   <h2
+  //     className={`group-[.experience]:text-[1.5em]
+  //       group-[.experience]:[&+p]:my-2 group-[.experience]:[&+p]:tracking-widest group-[.experience]:[&+p]:text-[0.75em] group-[.experience]:[&+p]:uppercase`}
+  //     {...props}
+  //   />
+  // ),
   // h3: (props: HeadingProps) => (
   //   <h3
   //     className="text-gray-800 dark:text-zinc-200 font-medium mt-8 mb-3"

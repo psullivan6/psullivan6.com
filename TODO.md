@@ -9,6 +9,10 @@
 - [ ] https://nextjs.org/docs/app/guides/data-security
 - [ ] Add notes that this portfolio site stack is HEAVILY reliant on vercel (Next.js, ai package), but I'm capable of building with other stacks, just choosing convenience for me to get the proof of concept shipped
 - [ ] Keep an eye on `@ai-sdk/mcp` and update accordingly ... it's installed at a fixed version and is an early release
+- [ ] Add a TL;DR tone where every section is just 1 sentence
+- [ ] Add expand/collapse section for the older experience jobs to hide on initial load, then interaction to "open" them for reading
+  - either collapse several into 1 button to expand all ... OR ...
+  - add expand/collapse for each job and just show the company name and time spent there ... leaning towards first option
 
 ## AI Chat functionality
 
@@ -18,3 +22,4 @@
 - [ ] Change the prompt submit button to a stop icon when streaming data and add the abort logic to the server
 - [ ] Add gibberish detection to the prompt and skip an API call and simply return an error with a path to retry if the user believes the prompt is real; include strings like "asdf " that will never pass
 - [ ] remove the chat message storage logic, since it's just for testing
+- [ ] expose the site preferences (light, dark, etc...) to the MCP ... ensure consumers using this MCP outside this site do not have access to these tools ... perhaps treat them as authenticated tools that my site's AI agent auths into

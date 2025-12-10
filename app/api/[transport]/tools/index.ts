@@ -1,6 +1,7 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 
 // Tools
+import { registerGetExperienceTool } from './get-experience';
 import { registerGetHiringRecommendationTool } from './get-hiring-recommendation';
 import { registerGetTechnicalSkillsTool } from './get-technical-skills';
 import { registerGreetingTool } from './greeting';
@@ -11,4 +12,5 @@ export const registerTools = (server: McpServer) => {
   registerListFilesTool(server);
   registerGetHiringRecommendationTool(server);
   registerGetTechnicalSkillsTool(server);
+  registerGetExperienceTool(server);
 };

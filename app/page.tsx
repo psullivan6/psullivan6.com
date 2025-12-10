@@ -14,27 +14,22 @@ import UofO from '@/content/experience/university-of-oregon.mdx';
 import heroContent from '@/content/hero.json';
 import ProjectsUIScorecards from '@/content/projects/ui-scorecards.mdx';
 import TechAndTools from '@/content/technologies.mdx';
-import { readFileSync } from 'fs';
 import Image from 'next/image';
 import Link from 'next/link';
-import { resolve } from 'path';
-import AiDialogSection from './components/AiDialogSection/AiDialogSection';
 // import { useContentContext } from './components/ContentProvider/ContentProvider';
-import { UIMessage } from 'ai';
+import { components as experienceMdxComponents } from '@/content/experience/mdx-components';
 import ChatWindow from './components/ChatWindow/ChatWindow';
+import SeeMoreSection from './components/SeeMoreSection';
+import Separator from './components/Separator';
 import { Button } from './components/ui/button';
 import { lato } from './utilities/fonts';
 
 // import './page.css';
 
-const messagesFilePath = resolve(process.cwd(), '.chats/yoUWrixVNxQMfE3A.json');
-
 const HomePage = () => {
   // TODO - make this tone context provider server-side logic; store in file on system instead of in context?
   const tone = 'default';
   // const { tone } = useContentContext();
-  const messagesData = readFileSync(messagesFilePath, 'utf-8');
-  const messages: UIMessage[] = JSON.parse(messagesData);
 
   return (
     <main className="relative z-10 bg-background min-h-[calc(100vh-71px)] shadow-xl">
@@ -75,7 +70,7 @@ const HomePage = () => {
         </section>
 
         {/* AI Client Section */}
-        <ChatWindow messages={messages} />
+        <ChatWindow />
 
         {/* Bio Section */}
         <section id="bio" className="my-24">
@@ -91,25 +86,41 @@ const HomePage = () => {
           />
 
           <section className="mb-24 group experience">
-            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
-              {/* @ts-expect-error - mdx.d.ts file doesn't resolve this */}
-              <Lowes tone={tone} />
-            </div>
-            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
-              <Union />
-            </div>
-            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
-              <Struck />
-            </div>
-            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
-              <TheRegisterGuard />
-            </div>
-            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
-              <Pac12Conference />
-            </div>
             <div>
-              <UofO />
+              <Lowes components={experienceMdxComponents} />
             </div>
+
+            <Separator />
+
+            <div>
+              <Union components={experienceMdxComponents} />
+            </div>
+
+            <Separator />
+
+            <div>
+              <Struck components={experienceMdxComponents} />
+            </div>
+
+            <Separator />
+
+            <SeeMoreSection>
+              <div>
+                <TheRegisterGuard components={experienceMdxComponents} />
+              </div>
+
+              <Separator />
+
+              <div>
+                <Pac12Conference components={experienceMdxComponents} />
+              </div>
+
+              <Separator />
+
+              <div>
+                <UofO components={experienceMdxComponents} />
+              </div>
+            </SeeMoreSection>
           </section>
 
           {/* <section className="mb-24">

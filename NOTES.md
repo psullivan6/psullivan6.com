@@ -1,5 +1,13 @@
 # Notes
 
+## Tech Stack
+
+- chose Next.js since it handles `.mdx` well with minimal setup
+- content is almost all Markdown and MDX files, because:
+  - they're easy to edit and keep up to date, which I struggle to do
+  - they are easy for LLMs to read, so I can use the same content for the humans AND the bots
+  - there's a basic constraint with the types of formatting, ensuring consistent content and prevents me from trying to do too many fancy things
+
 ## Tailwind CSS
 
 - prose info: https://tailwindcss.com/blog/tailwindcss-typography-v0-5
