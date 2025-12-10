@@ -1,0 +1,35 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-technical-skills",
+        "toolCallId": "toolu_01879F7Eu8N4Kxecy2e2kfar",
+        "state": "output-available",
+        "input": {},
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "<h2 className=\"[column-span:all] [&]:mb-4\">Actively Using</h2>\n\n- Bitbucket\n- ChatGPT\n- Confluence\n- CoPilot AI\n- CSS (Vanilla CSS, Plain CSS)\n- date-fns\n- Docker\n- Drizzle ORM\n- ESlint\n- Figma (Design, Make, FigJam, etc...)\n- Git\n- HTML, JSX, TSX\n- Jest, React Testing Library\n- Jira\n- JSON\n- lodash\n- Markdown & MDX\n- Microsoft Teams, Outlook\n- Model Context Protocol (MCP)\n- Next.js\n- Node.js, npm\n- NX Monorepos\n- Playwright\n- PostgreSQL\n- Prettier\n- Radix UI\n- React\n- react-aria-components\n- recharts\n- Rollup\n- shadcn/ui\n- Storybook\n- Strapi\n- styled-components\n- Tailwind CSS\n- Tanstack (Start, Query, Router)\n- TypeScript, tsc\n- Vercel\n- Visual Studio Code IDE\n- Vite\n- Webpack & Module Federation\n- Windsurf IDE + Cascade AI\n- YAML\n- Zod\n\n<h2 className=\"[column-span:all] [&]:mb-4\">Used Recently</h2>\n\n- Apollo Server & Client\n- AWS (S3, EC2)\n- Axios\n- Backbone.js\n- Bootstrap\n- Contentful\n- create-react-app\n- Cypress\n- Electron\n- Express.js\n- Gatsby\n- GitHub Pages\n- Google Workspace (Gmail, Docs, Sheets, Drive)\n- GraphQL\n- GSAP\n- Gulp\n- Heroku\n- Husky\n- Jenkins\n- jQuery\n- Kafka\n- Keystone CMS\n- Mock Service Worker (MSW)\n- Module Federation / MFEs\n- MongoDB\n- Motion (Framer Motion)\n- Netlify\n- pnpm\n- Prisma\n- Puppeteer\n- React Router\n- Redis\n- Redux, Redux Toolkit (RTK)\n- Remix\n- SASS/SCSS\n- Selenium\n- Slack\n- Sublime IDE\n- Three.js + React Three Fiber\n- Trello\n- Vitest\n- WebGL\n- Yarn\n"
+            }
+          ],
+          "isError": false
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Patrick has extensive technical skills across modern web development. Here's a summary:\n\n**Currently Active With:**\nReact, TypeScript, Next.js, Node.js, PostgreSQL, Tailwind CSS, shadcn/ui, Drizzle ORM, Tanstack (Query, Router, Start), Playwright, Jest, Storybook, Docker, NX Monorepos, Vite, Webpack, Model Context Protocol (MCP), and various AI tools (ChatGPT, CoPilot, Cascade AI).\n\n**Recently Used:**\nGraphQL, Apollo, Redux, Remix, Gatsby, MongoDB, Redis, Prisma, Cypress, AWS (S3, EC2), Kafka, Module Federation, Three.js, Electron, Express.js, and more.\n\nPatrick is a full-stack developer with strong expertise in modern React ecosystems, TypeScript, testing frameworks, and cloud deployment platforms.",
+        "state": "done"
+      }
+    ]
+  }
+]

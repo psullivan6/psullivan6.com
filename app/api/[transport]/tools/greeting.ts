@@ -20,8 +20,14 @@ export const registerGreetingTool = (server: McpServer) => {
     async ({ name }) => {
       const output = {
         salutation: `Hi ${name} 👋`,
-        content: ['Thanks for using the Patrick MCP', 'Ask me about real Patrick.'],
-        suggestedFollowupTopics: ['professional experience', 'personal hobbies', 'biography'],
+        content: ["I'm Patrick AI, powered by the Patrick MCP", 'Ask me about real Patrick.'],
+        suggestedFollowupTopics: [
+          'professional experience',
+          'personal hobbies',
+          'biography',
+          'list-files',
+          'list-tools',
+        ],
       };
 
       return {

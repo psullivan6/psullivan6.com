@@ -16,3 +16,5 @@
 - [ ] Ensure the mcp client closes when the user is done
 - [ ] Enable known question and responses through fuzzy text reading or similar, so "Hey, what's up?" is a known greeting, so respond to it in a known way (ex: https://www.britannica.com/dictionary/eb/qa/10-other-ways-to-say-how-are-you)
 - [ ] Change the prompt submit button to a stop icon when streaming data and add the abort logic to the server
+- [ ] Add gibberish detection to the prompt and skip an API call and simply return an error with a path to retry if the user believes the prompt is real; include strings like "asdf " that will never pass
+- [ ] remove the chat message storage logic, since it's just for testing

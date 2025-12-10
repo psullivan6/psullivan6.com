@@ -68,6 +68,7 @@ const ChatMessages = ({ messages, regenerate, status }: ChatMessagesProps) => {
                               <RefreshCcwIcon className="size-3" />
                             </MessageAction>
                             <MessageAction
+                              // TODO - add a "copied successfully" animation or something here and/or just remove this
                               onClick={() => navigator.clipboard.writeText(part.text)}
                               label="Copy"
                             >

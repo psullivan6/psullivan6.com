@@ -1,0 +1,16 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Yes, Patrick actively uses Jest along with React Testing Library. It's listed in his \"Actively Using\" technical skills.",
+        "state": "done"
+      }
+    ]
+  }
+]

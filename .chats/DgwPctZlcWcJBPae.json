@@ -1,0 +1,100 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "I'll help you find information about Patrick's technical skills. Let me access his profile information.",
+        "state": "done"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "list-files",
+        "toolCallId": "toolu_01JMCet7hRfg8MJdHP5sgaBC",
+        "state": "output-available",
+        "input": {},
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "A list of available resource links:"
+            },
+            {
+              "name": "Biography Resource",
+              "uri": "resource://biography",
+              "description": "First example file for ResourceLink demonstration",
+              "mimeType": "text/markdown",
+              "type": "resource_link"
+            },
+            {
+              "type": "text",
+              "text": "\nYou can read any of these resources using their URI or accessing the resource in your MCP client interface."
+            }
+          ]
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "tool-$get_resource",
+        "toolCallId": "toolu_01W2p28c3DXdKRMEM6Rn4vJb",
+        "state": "output-error",
+        "rawInput": {
+          "uri": "resource://biography"
+        },
+        "errorText": "Model tried to call unavailable tool '$get_resource'. Available tools: greeting, list-files, hiring-recommendation."
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Let me greet you properly to access Patrick's information:",
+        "state": "done"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "greeting",
+        "toolCallId": "toolu_01PWdGMAmpjkR6672FLsRJdC",
+        "state": "output-available",
+        "input": {
+          "name": "User"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"salutation\":\"Hi User 👋\",\"content\":[\"Thanks for using the Patrick MCP\",\"Ask me about real Patrick.\"],\"suggestedFollowupTopics\":[\"professional experience\",\"personal hobbies\",\"biography\"]}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "salutation": "Hi User 👋",
+            "content": [
+              "Thanks for using the Patrick MCP",
+              "Ask me about real Patrick."
+            ],
+            "suggestedFollowupTopics": [
+              "professional experience",
+              "personal hobbies",
+              "biography"
+            ]
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Based on the available resources, I can see there's biographical information about Patrick. However, I need to access the resource content directly through your MCP client interface to provide you with specific details about his technical skills.\n\nCould you please help me access the biography resource, or would you like me to provide a hiring recommendation which may include technical skills information?",
+        "state": "done"
+      }
+    ]
+  }
+]

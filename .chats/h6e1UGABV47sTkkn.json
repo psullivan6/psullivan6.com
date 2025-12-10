@@ -1,0 +1,16 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "You can call the following tools:\n\n1. **greeting** - Initializes the Patrick MCP and provides helpful guidance\n2. **list-files** - Returns a list of available resource files\n3. **hiring-recommendation** - Assists in evaluating Patrick for a hiring decision\n4. **get-technical-skills** - Retrieves Patrick's technical skills and technologies used\n\nThese tools help you learn about Patrick's professional background, skills, and qualifications.",
+        "state": "done"
+      }
+    ]
+  }
+]

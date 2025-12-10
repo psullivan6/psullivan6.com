@@ -1,11 +1,11 @@
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod/v4';
 
-export const registerHiringRecommendationTool = (server: McpServer) => {
+export const registerGetHiringRecommendationTool = (server: McpServer) => {
   server.registerTool(
-    'hiring-recommendation',
+    'get-hiring-recommendation',
     {
-      title: 'Hiring Recommendation Tool',
+      title: 'Get Hiring Recommendation Tool',
       description: 'Tool to assist in evaluating Patrick for a hiring decision.',
       inputSchema: z.object({}),
     },

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Yes, I (Patrick) actively use Storybook. It's listed among my current technical skills in the \"Actively Using\" section.",
+        "state": "done"
+      }
+    ]
+  }
+]

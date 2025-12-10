@@ -1,0 +1,51 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "greeting",
+        "toolCallId": "toolu_013mCZ4RCjNV5p6Gv9HxjMwj",
+        "state": "output-available",
+        "input": {
+          "name": "there"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"salutation\":\"Hi there 👋\",\"content\":[\"Thanks for using the Patrick MCP\",\"Ask me about real Patrick.\"],\"suggestedFollowupTopics\":[\"professional experience\",\"personal hobbies\",\"biography\",\"list-files\",\"list-tools\"]}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "salutation": "Hi there 👋",
+            "content": [
+              "Thanks for using the Patrick MCP",
+              "Ask me about real Patrick."
+            ],
+            "suggestedFollowupTopics": [
+              "professional experience",
+              "personal hobbies",
+              "biography",
+              "list-files",
+              "list-tools"
+            ]
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Hi there 👋\n\nI'm Patrick AI, powered by the Patrick MCP! I have access to information about Patrick (psullivan6), a software developer.\n\nI can help you with:\n- **Professional experience** - career background and work history\n- **Technical skills** - technologies and tools he's used\n- **Hiring recommendations** - evaluation for hiring decisions\n- **Personal hobbies** - interests outside of work\n- **Biography** - background information\n\nWhat would you like to know about Patrick?",
+        "state": "done"
+      }
+    ]
+  }
+]

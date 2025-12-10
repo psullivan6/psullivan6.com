@@ -14,7 +14,7 @@ import './ChatPrompt.css?url';
 
 export type ChatPromptElement = HTMLDivElement;
 
-export type ChatPromptProps = ComponentPropsWithRef<'div'> & {
+export type ChatPromptProps = Omit<ComponentPropsWithRef<'div'>, 'onSubmit'> & {
   onSubmit: ({ prompt }: { prompt: string }) => void;
 };
 

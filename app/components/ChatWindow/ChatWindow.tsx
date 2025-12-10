@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { UIMessage, useChat } from '@ai-sdk/react';
+import { useChat } from '@ai-sdk/react';
 import { X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { toast } from 'sonner';
@@ -13,10 +13,10 @@ const getPositionValues = (element: HTMLDivElement) => {
   return element.getBoundingClientRect();
 };
 
-const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
-  // const { messages, sendMessage } = useChat({
-  //   onError: (err) => toast.error(err.message),
-  // });
+const ChatWindow = () => {
+  const { messages, sendMessage, regenerate, status } = useChat({
+    onError: (err) => toast.error(err.message),
+  });
   const containerRef = useRef<HTMLDivElement | null>(null);
   const chatPromptRef = useRef<ChatPromptElement | null>(null);
 
@@ -61,7 +61,7 @@ const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
 
   const handlePromptSubmit: ChatPromptProps['onSubmit'] = ({ prompt }) => {
     handleOpen();
-    // sendMessage({ text: prompt })
+    sendMessage({ text: prompt });
   };
 
   const handleClose = () => {
@@ -118,7 +118,7 @@ const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
 
               {/* NOTE - use the padding bottom to allow an overscroll for more whitespace when reading */}
               <div className="h-full overflow-auto pb-24">
-                <ChatMessages messages={messages} />
+                <ChatMessages messages={messages} regenerate={regenerate} status={status} />
               </div>
             </>
           ) : null}
