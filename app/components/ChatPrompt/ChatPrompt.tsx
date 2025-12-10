@@ -7,18 +7,16 @@ import {
   InputGroupTextarea,
 } from '@/components/ui/input-group';
 import { Kbd, KbdGroup } from '@/components/ui/kbd';
-import { type UIMessage, useChat } from '@ai-sdk/react';
+import { useChat } from '@ai-sdk/react';
 import { useForm } from '@tanstack/react-form-nextjs';
 import { ArrowUp, LoaderCircle } from 'lucide-react';
 import { KeyboardEventHandler, useEffect, useRef } from 'react';
-import { toast } from 'sonner';
-import AiChat from './AIChat';
 
-const AiDialogSection = ({ messages, sendMessage }: { messages: UIMessage[] }) => {
-  // const { messages, sendMessage } = useChat({
-  //   onError: (err) => toast.error(err.message),
-  // });
+type ChatPromptProps = {
+  sendMessage: ReturnType<typeof useChat>['sendMessage'];
+};
 
+const ChatPrompt = ({ sendMessage }: ChatPromptProps) => {
   const promptRef = useRef<HTMLTextAreaElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
   const tsForm = useForm({
@@ -56,9 +54,7 @@ const AiDialogSection = ({ messages, sendMessage }: { messages: UIMessage[] }) =
   }, []);
 
   return (
-    <section className="mx-24">
-      <AiChat messages={messages} />
-
+    <div>
       <form
         ref={formRef}
         onSubmit={(e) => {
@@ -123,8 +119,8 @@ const AiDialogSection = ({ messages, sendMessage }: { messages: UIMessage[] }) =
           for a line break
         </span>
       </span>
-    </section>
+    </div>
   );
 };
 
-export default AiDialogSection;
+export default ChatPrompt;

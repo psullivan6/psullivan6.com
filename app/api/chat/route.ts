@@ -1,3 +1,4 @@
+import { storeChat } from '@/components/AiDialogSection/messages-store';
 import { getResourceContent } from '@/utilities/get-resource-content';
 import { Ratelimit } from '@upstash/ratelimit';
 import { kv } from '@vercel/kv';
@@ -38,7 +39,13 @@ export async function POST(req: Request) {
       system: getResourceContent({ filePath: 'mcp-server-prompt.md' }),
     });
 
-    return result.toUIMessageStreamResponse();
+    return result.toUIMessageStreamResponse({
+      onFinish: async ({ messages }) => {
+        const chatId = storeChat(messages);
+
+        console.log('chatId', chatId);
+      },
+    });
   } catch (error) {
     return Response.json({ error });
   }

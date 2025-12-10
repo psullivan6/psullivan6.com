@@ -1,4 +1,4 @@
-'use client';
+// 'use client';
 
 import BioSnarky from './content/bio-snarky.md';
 import Bio from './content/bio.mdx';
@@ -14,20 +14,30 @@ import UofO from '@/content/experience/university-of-oregon.mdx';
 import heroContent from '@/content/hero.json';
 import ProjectsUIScorecards from '@/content/projects/ui-scorecards.mdx';
 import TechAndTools from '@/content/technologies.mdx';
+import { readFileSync } from 'fs';
 import Image from 'next/image';
 import Link from 'next/link';
+import { resolve } from 'path';
 import AiDialogSection from './components/AiDialogSection/AiDialogSection';
-import { useContentContext } from './components/ContentProvider/ContentProvider';
+// import { useContentContext } from './components/ContentProvider/ContentProvider';
+import { UIMessage } from 'ai';
+import ChatWindow from './components/ChatWindow/ChatWindow';
 import { Button } from './components/ui/button';
 import { lato } from './utilities/fonts';
 
 // import './page.css';
 
+const messagesFilePath = resolve(process.cwd(), '.chats/yoUWrixVNxQMfE3A.json');
+
 const HomePage = () => {
-  const { tone } = useContentContext();
+  // TODO - make this tone context provider server-side logic; store in file on system instead of in context?
+  const tone = 'default';
+  // const { tone } = useContentContext();
+  const messagesData = readFileSync(messagesFilePath, 'utf-8');
+  const messages: UIMessage[] = JSON.parse(messagesData);
 
   return (
-    <main className="relative z-10 bg-background min-h-[calc(100vh-69px)] shadow-xl">
+    <main className="relative z-10 bg-background min-h-[calc(100vh-71px)] shadow-xl">
       <div className="prose prose-slate lg:prose-lg xl:prose-xl dark:prose-invert prose-headings:mb-0 mx-auto p-6">
         {/* Hero Title Section */}
         <section className="my-40">
@@ -65,7 +75,7 @@ const HomePage = () => {
         </section>
 
         {/* AI Client Section */}
-        <AiDialogSection />
+        <ChatWindow messages={messages} />
 
         {/* Bio Section */}
         <section id="bio">{tone === 'snarky' ? <BioSnarky /> : <Bio />}</section>

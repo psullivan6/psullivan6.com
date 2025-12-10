@@ -10,7 +10,7 @@ export default function NotFound() {
   const { tone } = useContentContext();
 
   return (
-    <main className="relative z-10 flex bg-background min-h-[calc(100vh-69px)] shadow-xl">
+    <main className="relative z-10 flex bg-background min-h-[calc(100vh-71px)] shadow-xl">
       <div className="w-full prose prose-slate lg:prose-lg xl:prose-xl dark:prose-invert prose-headings:mb-0 m-auto p-6">
         <div className="flex flex-col gap-12 items-center justify-center">
           <div title="I drew this; whoa!" className="w-1/2 mx-auto text-primary">

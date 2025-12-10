@@ -1,0 +1,73 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "greeting",
+        "toolCallId": "toolu_01Esyxgi6gKfEKzt2zAK4tXi",
+        "state": "output-available",
+        "input": {
+          "name": "there"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"salutation\":\"Hi there 👋\",\"content\":[\"Thanks for using the Patrick MCP\",\"Ask me about real Patrick.\"],\"suggestedFollowupTopics\":[\"professional experience\",\"personal hobbies\",\"sports preferences\",\"biography\"]}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "salutation": "Hi there 👋",
+            "content": ["Thanks for using the Patrick MCP", "Ask me about real Patrick."],
+            "suggestedFollowupTopics": [
+              "professional experience",
+              "personal hobbies",
+              "sports preferences",
+              "biography"
+            ]
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "list-files",
+        "toolCallId": "toolu_01PGuejKr2V5VjncQ7JtsjKU",
+        "state": "output-available",
+        "input": {},
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "A list of available resource links:"
+            },
+            {
+              "name": "Biography Resource",
+              "uri": "resource://biography",
+              "description": "First example file for ResourceLink demonstration",
+              "mimeType": "text/markdown",
+              "type": "resource_link"
+            },
+            {
+              "type": "text",
+              "text": "\nYou can read any of these resources using their URI or accessing the resource in your MCP client interface."
+            }
+          ]
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Hey there! 👋\n\nPatrick has extensive professional experience as a software engineer and technical leader. He's worked across various domains including:\n\n**Current Role:** Senior engineering leader with expertise in full-stack development, cloud architecture, and team leadership.\n\n**Technical Expertise:**\n- Full-stack development (React, Node.js, TypeScript, Python)\n- Cloud platforms (AWS, Azure, GCP)\n- DevOps and CI/CD pipelines\n- System architecture and design\n- API development and microservices\n\n**Career Highlights:**\n- Led engineering teams and mentored developers\n- Built scalable applications and infrastructure\n- Implemented modern development practices and tooling\n- Strong focus on code quality, testing, and automation\n\nWould you like to know more about any specific aspect of Patrick's experience, such as particular projects, technologies, or leadership roles?",
+        "state": "done"
+      }
+    ]
+  }
+]

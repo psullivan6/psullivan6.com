@@ -1,5 +1,5 @@
 import { useChat } from '@ai-sdk/react';
-import { AiResponse } from '../AiResponse/AiResponse';
+import AiResponse from '../AiResponse/AiResponse';
 
 type AiChatProps = {
   messages: ReturnType<typeof useChat>['messages'];
