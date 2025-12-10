@@ -64,7 +64,7 @@ const ChatPrompt = ({ onSubmit }: ChatPromptProps) => {
         }}
         className="col-span-2"
       >
-        <InputGroup className="prompt rounded-3xl !bg-background items-end">
+        <InputGroup className="prompt rounded-3xl !bg-background items-end transition-[width] duration-300">
           <tsForm.Field
             name="prompt"
             validators={{
@@ -78,7 +78,7 @@ const ChatPrompt = ({ onSubmit }: ChatPromptProps) => {
                 name={field.name}
                 value={field.state.value}
                 onBlur={field.handleBlur}
-                className="z-10 px-5"
+                className="z-10 px-5 max-h-40 overflow-auto"
                 onChange={(e) => field.handleChange(e.target.value)}
                 onKeyDown={handleTextareaKeyDown}
               />

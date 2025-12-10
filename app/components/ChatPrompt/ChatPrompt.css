@@ -2,7 +2,7 @@
   position: absolute;
   inset: -1px;
   border: 2px solid transparent;
-  border-radius: calc(var(--radius) * 3);
+  border-radius: var(--radius-3xl);
   background: linear-gradient(var(--color-background), var(--color-background)) padding-box,
     linear-gradient(36deg, var(--color-sky-500), var(--color-emerald-600)) border-box;
   content: '';
@@ -21,7 +21,7 @@
   position: absolute;
   inset: -2px;
   border: 6px solid transparent;
-  border-radius: calc(var(--radius) * 3);
+  border-radius: var(--radius-3xl);
   background: linear-gradient(var(--color-background), var(--color-background)) padding-box,
     linear-gradient(36deg, var(--color-sky-500), var(--color-emerald-600)) border-box;
   content: '';

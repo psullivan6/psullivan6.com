@@ -75,8 +75,19 @@ const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
 
   return (
     <>
-      <div ref={containerRef} className={isOpen ? 'fixed z-60 bg-background' : 'relative'}>
-        <div className="flex flex-col gap-6 max-w-prose mx-auto h-full p-6">
+      <div
+        ref={containerRef}
+        className={cn(
+          'transition-all duration-300',
+          isOpen ? 'fixed z-60 bg-background' : 'relative bg-transparent'
+        )}
+      >
+        <div
+          className={cn(
+            'flex flex-col gap-6 max-w-prose mx-auto h-full transition-[padding] duration-300 py-6',
+            isOpen ? 'px-6' : 'px-12'
+          )}
+        >
           {isOpen ? (
             <div className="h-full overflow-auto">
               <ChatMessages messages={messages} />

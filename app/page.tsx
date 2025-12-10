@@ -78,7 +78,9 @@ const HomePage = () => {
         <ChatWindow messages={messages} />
 
         {/* Bio Section */}
-        <section id="bio">{tone === 'snarky' ? <BioSnarky /> : <Bio />}</section>
+        <section id="bio" className="my-24">
+          {tone === 'snarky' ? <BioSnarky /> : <Bio />}
+        </section>
 
         {/* Experience Section */}
         <div>
@@ -90,7 +92,7 @@ const HomePage = () => {
 
           <section className="mb-24 group experience">
             <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
-              {/* @ts-ignore - mdx.d.ts file doesn't resolve this */}
+              {/* @ts-expect-error - mdx.d.ts file doesn't resolve this */}
               <Lowes tone={tone} />
             </div>
             <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
@@ -102,8 +104,11 @@ const HomePage = () => {
             <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
               <TheRegisterGuard />
             </div>
-            <div className="mb-18">
+            <div className="flex flex-col mb-9 after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mt-9 after:mx-auto after:block after:color-prose">
               <Pac12Conference />
+            </div>
+            <div>
+              <UofO />
             </div>
           </section>
 
@@ -117,9 +122,13 @@ const HomePage = () => {
           <h2
             id="education"
             className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-background/50 backdrop-blur-lg"
-            dangerouslySetInnerHTML={{ __html: experiencesContent[tone].label }}
-          />
-          <UofO />
+          >
+            Education
+          </h2>
+          <section>
+            <h1>University of Oregon</h1>
+            <p>Content here</p>
+          </section>
         </div>
 
         {/* <h2 className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-background/50 backdrop-blur-lg">
