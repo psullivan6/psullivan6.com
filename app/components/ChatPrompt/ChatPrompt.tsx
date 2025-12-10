@@ -9,14 +9,16 @@ import {
 import { Kbd, KbdGroup } from '@/components/ui/kbd';
 import { useForm } from '@tanstack/react-form-nextjs';
 import { ArrowUp, LoaderCircle } from 'lucide-react';
-import { KeyboardEventHandler, useEffect, useRef } from 'react';
+import { ComponentPropsWithRef, KeyboardEventHandler, useEffect, useRef } from 'react';
 import './ChatPrompt.css?url';
 
-export type ChatPromptProps = {
+export type ChatPromptElement = HTMLDivElement;
+
+export type ChatPromptProps = ComponentPropsWithRef<'div'> & {
   onSubmit: ({ prompt }: { prompt: string }) => void;
 };
 
-const ChatPrompt = ({ onSubmit }: ChatPromptProps) => {
+const ChatPrompt = ({ onSubmit, ref }: ChatPromptProps) => {
   const promptRef = useRef<HTMLTextAreaElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
   const tsForm = useForm({
@@ -54,7 +56,7 @@ const ChatPrompt = ({ onSubmit }: ChatPromptProps) => {
   }, []);
 
   return (
-    <div className="w-full">
+    <div ref={ref} className="w-full">
       <form
         ref={formRef}
         onSubmit={(e) => {

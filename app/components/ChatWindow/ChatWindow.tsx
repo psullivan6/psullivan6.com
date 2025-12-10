@@ -1,12 +1,13 @@
 'use client';
 
-import { Button, ButtonProps } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { UIMessage, useChat } from '@ai-sdk/react';
+import { X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { toast } from 'sonner';
 import ChatMessages from '../ChatMessages/ChatMessages';
-import ChatPrompt, { ChatPromptProps } from '../ChatPrompt/ChatPrompt';
+import ChatPrompt, { type ChatPromptElement, type ChatPromptProps } from '../ChatPrompt/ChatPrompt';
 
 const getPositionValues = (element: HTMLDivElement) => {
   return element.getBoundingClientRect();
@@ -17,61 +18,80 @@ const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
   //   onError: (err) => toast.error(err.message),
   // });
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const chatPromptRef = useRef<ChatPromptElement | null>(null);
 
   const [isOpen, setIsOpen] = useState(false);
   const [positionData, setPositionData] = useState<DOMRect | null>(null);
 
-  const setOpen = () => {
-    const newIsOpen = !isOpen;
+  const handleOpen = () => {
     const positionValues = getPositionValues(containerRef.current as HTMLDivElement);
     setPositionData(positionValues);
 
     if (containerRef.current) {
-      if (newIsOpen) {
-        document.body.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+      (document.querySelector('header.header') as HTMLElement).style.zIndex = '-1';
 
-        containerRef.current.style.cssText = `
+      containerRef.current.style.cssText = `
           top: ${positionValues.top}px;
           left: ${positionValues.left}px;
           width: ${positionValues.width}px;
           height: ${positionValues.height}px;
         `;
 
-        containerRef.current.animate(
-          [
-            {
-              top: `${positionValues.top}px`,
-              left: `${positionValues.left}px`,
-              width: `${positionValues.width}px`,
-              height: `${positionValues.height}px`,
-            },
-            { top: '71px', left: 0, width: '100%', height: 'calc(100% - 71px)' },
-          ],
+      containerRef.current.animate(
+        [
           {
-            duration: 240,
-            fill: 'forwards',
-            easing: 'ease-out',
-          }
-        );
-      } else {
-        containerRef.current.style.cssText = '';
-        document.body.style.overflow = '';
-      }
+            top: `${positionValues.top}px`,
+            left: `${positionValues.left}px`,
+            width: `${positionValues.width}px`,
+            height: `${positionValues.height}px`,
+          },
+          { top: 0, left: 0, width: '100%', height: '100%' },
+        ],
+        {
+          duration: 240,
+          fill: 'forwards',
+          easing: 'ease-out',
+        }
+      );
     }
 
-    setIsOpen(newIsOpen);
+    setIsOpen(true);
   };
 
   const handlePromptSubmit: ChatPromptProps['onSubmit'] = ({ prompt }) => {
-    setOpen();
+    handleOpen();
     // sendMessage({ text: prompt })
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   useEffect(() => {
+    const keydownHandler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        handleClose();
+      }
+    };
+
+    document.addEventListener('keydown', keydownHandler);
+
     return () => {
       document.body.style.overflow = '';
     };
   }, []);
+
+  useEffect(() => {
+    if (!isOpen) {
+      (containerRef.current as HTMLDivElement).style.cssText = '';
+      document.body.style.overflow = '';
+      (document.querySelector('header.header') as HTMLElement).style = '';
+
+      chatPromptRef.current?.querySelector('textarea')?.focus();
+    }
+  }, [isOpen]);
 
   return (
     <>
@@ -84,16 +104,26 @@ const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
       >
         <div
           className={cn(
-            'flex flex-col gap-6 max-w-prose mx-auto h-full transition-[padding] duration-300 py-6',
+            'flex flex-col max-w-prose mx-auto h-full transition-[padding] duration-300 py-4',
             isOpen ? 'px-6' : 'px-12'
           )}
         >
           {isOpen ? (
-            <div className="h-full overflow-auto">
-              <ChatMessages messages={messages} />
-            </div>
+            <>
+              <header className="flex justify-end border-b pb-6 not-prose text-base lg:text-lg xl:text-xl items-center">
+                <Button variant="outline" onClick={handleClose}>
+                  Close <X />
+                </Button>
+              </header>
+
+              {/* NOTE - use the padding bottom to allow an overscroll for more whitespace when reading */}
+              <div className="h-full overflow-auto pb-24">
+                <ChatMessages messages={messages} />
+              </div>
+            </>
           ) : null}
-          <ChatPrompt onSubmit={handlePromptSubmit} />
+
+          <ChatPrompt ref={chatPromptRef} onSubmit={handlePromptSubmit} />
         </div>
       </div>
 
