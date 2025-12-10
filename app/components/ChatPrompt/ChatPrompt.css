@@ -1,0 +1,31 @@
+.prompt::before {
+  position: absolute;
+  inset: -1px;
+  border: 2px solid transparent;
+  border-radius: calc(var(--radius) * 3);
+  background: linear-gradient(var(--color-background), var(--color-background)) padding-box,
+    linear-gradient(36deg, var(--color-sky-500), var(--color-emerald-600)) border-box;
+  content: '';
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.75;
+  }
+}
+
+.prompt::after {
+  position: absolute;
+  inset: -2px;
+  border: 6px solid transparent;
+  border-radius: calc(var(--radius) * 3);
+  background: linear-gradient(var(--color-background), var(--color-background)) padding-box,
+    linear-gradient(36deg, var(--color-sky-500), var(--color-emerald-600)) border-box;
+  content: '';
+  z-index: -1;
+  filter: blur(4px);
+  animation: pulse 2s ease-out alternate infinite;
+}

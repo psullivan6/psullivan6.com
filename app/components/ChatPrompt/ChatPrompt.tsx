@@ -7,16 +7,16 @@ import {
   InputGroupTextarea,
 } from '@/components/ui/input-group';
 import { Kbd, KbdGroup } from '@/components/ui/kbd';
-import { useChat } from '@ai-sdk/react';
 import { useForm } from '@tanstack/react-form-nextjs';
 import { ArrowUp, LoaderCircle } from 'lucide-react';
 import { KeyboardEventHandler, useEffect, useRef } from 'react';
+import './ChatPrompt.css?url';
 
-type ChatPromptProps = {
-  sendMessage: ReturnType<typeof useChat>['sendMessage'];
+export type ChatPromptProps = {
+  onSubmit: ({ prompt }: { prompt: string }) => void;
 };
 
-const ChatPrompt = ({ sendMessage }: ChatPromptProps) => {
+const ChatPrompt = ({ onSubmit }: ChatPromptProps) => {
   const promptRef = useRef<HTMLTextAreaElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
   const tsForm = useForm({
@@ -24,7 +24,7 @@ const ChatPrompt = ({ sendMessage }: ChatPromptProps) => {
       prompt: '',
     },
     onSubmit: async ({ formApi, value: { prompt } }) => {
-      sendMessage({ text: prompt });
+      onSubmit({ prompt });
       formApi.reset();
     },
   });
@@ -54,7 +54,7 @@ const ChatPrompt = ({ sendMessage }: ChatPromptProps) => {
   }, []);
 
   return (
-    <div>
+    <div className="w-full">
       <form
         ref={formRef}
         onSubmit={(e) => {
@@ -64,7 +64,7 @@ const ChatPrompt = ({ sendMessage }: ChatPromptProps) => {
         }}
         className="col-span-2"
       >
-        <InputGroup className="rounded-3xl !bg-background items-end">
+        <InputGroup className="prompt rounded-3xl !bg-background items-end">
           <tsForm.Field
             name="prompt"
             validators={{
@@ -78,14 +78,14 @@ const ChatPrompt = ({ sendMessage }: ChatPromptProps) => {
                 name={field.name}
                 value={field.state.value}
                 onBlur={field.handleBlur}
-                className="px-5"
+                className="z-10 px-5"
                 onChange={(e) => field.handleChange(e.target.value)}
                 onKeyDown={handleTextareaKeyDown}
               />
             )}
           </tsForm.Field>
 
-          <InputGroupAddon align="inline-end" className="p-2.5 [&&]:mr-0">
+          <InputGroupAddon align="inline-end" className="z-10 p-2.5 [&&]:mr-0">
             <tsForm.Subscribe
               selector={(state) => [state.canSubmit, state.isSubmitting, state.isPristine]}
             >

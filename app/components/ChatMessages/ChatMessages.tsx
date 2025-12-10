@@ -1,13 +1,13 @@
 import { useChat } from '@ai-sdk/react';
 import AiResponse from '../AiResponse/AiResponse';
 
-type AiChatProps = {
+type ChatMessagesProps = {
   messages: ReturnType<typeof useChat>['messages'];
 };
 
-const AiChat = ({ messages }: AiChatProps) => {
+const ChatMessages = ({ messages }: ChatMessagesProps) => {
   return (
-    <div className="flex flex-col w-full max-w-md py-24 mx-auto stretch">
+    <div className="flex flex-col w-full stretch">
       {messages.map((message) => (
         <div key={message.id} className="whitespace-pre-wrap">
           {message.role === 'user' ? 'User: ' : 'AI: '}
@@ -25,4 +25,4 @@ const AiChat = ({ messages }: AiChatProps) => {
   );
 };
 
-export default AiChat;
+export default ChatMessages;

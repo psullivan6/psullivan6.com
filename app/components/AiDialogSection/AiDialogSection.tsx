@@ -12,7 +12,7 @@ import { useForm } from '@tanstack/react-form-nextjs';
 import { ArrowUp, LoaderCircle } from 'lucide-react';
 import { KeyboardEventHandler, useEffect, useRef } from 'react';
 import { toast } from 'sonner';
-import AiChat from './AIChat';
+import ChatMessages from '../ChatMessages/ChatMessages';
 
 const AiDialogSection = ({ messages, sendMessage }: { messages: UIMessage[] }) => {
   // const { messages, sendMessage } = useChat({
@@ -57,7 +57,7 @@ const AiDialogSection = ({ messages, sendMessage }: { messages: UIMessage[] }) =
 
   return (
     <section className="mx-24">
-      <AiChat messages={messages} />
+      <ChatMessages messages={messages} />
 
       <form
         ref={formRef}

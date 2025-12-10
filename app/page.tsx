@@ -40,13 +40,13 @@ const HomePage = () => {
     <main className="relative z-10 bg-background min-h-[calc(100vh-71px)] shadow-xl">
       <div className="prose prose-slate lg:prose-lg xl:prose-xl dark:prose-invert prose-headings:mb-0 mx-auto p-6">
         {/* Hero Title Section */}
-        <section className="my-40">
+        <section className="mb-24">
           <h2
             className={`${lato.className} !text-[4em]/[1.1em] font-black`}
             dangerouslySetInnerHTML={{ __html: heroContent[tone].title }}
           />
 
-          <div className="flex items-center gap-4 [&&]:mt-6 mb-12">
+          <div className="flex items-center gap-4 [&&]:mt-6">
             <Button asChild>
               <Link
                 href="Patrick Sullivan - Resume 2025.pdf"

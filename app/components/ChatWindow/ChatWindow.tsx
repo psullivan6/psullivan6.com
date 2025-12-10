@@ -5,7 +5,8 @@ import { cn } from '@/lib/utils';
 import { UIMessage, useChat } from '@ai-sdk/react';
 import { useEffect, useRef, useState } from 'react';
 import { toast } from 'sonner';
-import ChatPrompt from '../ChatPrompt/ChatPrompt';
+import ChatMessages from '../ChatMessages/ChatMessages';
+import ChatPrompt, { ChatPromptProps } from '../ChatPrompt/ChatPrompt';
 
 const getPositionValues = (element: HTMLDivElement) => {
   return element.getBoundingClientRect();
@@ -20,14 +21,9 @@ const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [positionData, setPositionData] = useState<DOMRect | null>(null);
 
-  const sendMessage: ReturnType<typeof useChat>['sendMessage'] = () => {
-    console.log('sdfgsdfg');
-    return Promise.resolve();
-  };
-
-  const handleToggle: ButtonProps['onClick'] = (event) => {
+  const setOpen = () => {
     const newIsOpen = !isOpen;
-    const positionValues = getPositionValues(event.currentTarget.parentElement as HTMLDivElement);
+    const positionValues = getPositionValues(containerRef.current as HTMLDivElement);
     setPositionData(positionValues);
 
     if (containerRef.current) {
@@ -49,7 +45,7 @@ const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
               width: `${positionValues.width}px`,
               height: `${positionValues.height}px`,
             },
-            { top: '71px', left: 0, width: '100%', height: '100%' },
+            { top: '71px', left: 0, width: '100%', height: 'calc(100% - 71px)' },
           ],
           {
             duration: 240,
@@ -66,6 +62,11 @@ const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
     setIsOpen(newIsOpen);
   };
 
+  const handlePromptSubmit: ChatPromptProps['onSubmit'] = ({ prompt }) => {
+    setOpen();
+    // sendMessage({ text: prompt })
+  };
+
   useEffect(() => {
     return () => {
       document.body.style.overflow = '';
@@ -74,13 +75,18 @@ const ChatWindow = ({ messages }: { messages: UIMessage[] }) => {
 
   return (
     <>
-      <div
-        ref={containerRef}
-        className={cn('border border-red-500 bg-background', isOpen ? 'fixed z-60' : 'relative')}
-      >
-        <ChatPrompt sendMessage={sendMessage} />
-        <Button onClick={handleToggle}>EXPAND FROM POSITION</Button>
+      <div ref={containerRef} className={isOpen ? 'fixed z-60 bg-background' : 'relative'}>
+        <div className="flex flex-col gap-6 max-w-prose mx-auto h-full p-6">
+          {isOpen ? (
+            <div className="h-full overflow-auto">
+              <ChatMessages messages={messages} />
+            </div>
+          ) : null}
+          <ChatPrompt onSubmit={handlePromptSubmit} />
+        </div>
       </div>
+
+      {/* Leave-behind "clone" element to take up the same space as the collapsed chat window */}
       {isOpen ? <div style={{ width: positionData?.width, height: positionData?.height }} /> : null}
     </>
   );
