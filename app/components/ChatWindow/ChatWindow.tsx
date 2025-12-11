@@ -116,10 +116,7 @@ const ChatWindow = () => {
                 </Button>
               </header>
 
-              {/* NOTE - use the padding bottom to allow an overscroll for more whitespace when reading */}
-              <div className="h-full overflow-auto pb-24">
-                <ChatMessages messages={messages} regenerate={regenerate} status={status} />
-              </div>
+              <ChatMessages messages={messages} regenerate={regenerate} status={status} />
             </>
           ) : null}
 

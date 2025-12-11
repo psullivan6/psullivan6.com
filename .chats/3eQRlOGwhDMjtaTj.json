@@ -1,0 +1,185 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "list-files",
+        "toolCallId": "toolu_01TLbqTiKso2twRr4AyrWmHJ",
+        "state": "output-available",
+        "input": {},
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "A list of available resource links:"
+            },
+            {
+              "name": "Biography Resource",
+              "uri": "resource://biography",
+              "description": "First example file for ResourceLink demonstration",
+              "mimeType": "text/markdown",
+              "type": "resource_link"
+            },
+            {
+              "type": "text",
+              "text": "\nYou can read any of these resources using their URI or accessing the resource in your MCP client interface."
+            }
+          ]
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Let me get Patrick's professional experience to calculate the years of work experience:",
+        "state": "done"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_014vtEMQDRmd7HGDeLXdpi6E",
+        "state": "output-available",
+        "input": {
+          "companyName": "lowes"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Lowe's\",\"resumeContent\":\"export const metadata = {\\n  title: \\\"Experience | Lowe's\\\",\\n  alternates: {\\n    canonical: '/experience/lowes',\\n  },\\n};\\n\\n# Lowe&rsquo;s\\n\\nJune 2020 &ndash; Current (5 years)\\n\\nLowe's is a Fortune 50 home improvement retailer serving millions of customers across North America. The company leverages technology to drive innovation, streamline operations, and deliver seamless digital experiences for its customers and associates.\\n\\n## Lead Software Engineer\\n\\nFebruary 2022 &ndash; Current\\n\\n- Serve as product & project manager &mdash; strategizing, planning, and leading a cross-disciplinary team to deliver product and customer service excellence, business objective compliance, and leadership reporting\\n- Build and maintain an enterprise design system (React component library, docs, plugins), increasing efficiency and enforcing brand and UI/UX standards compliance across 250+ apps\\n- Create and deliver several key initiatives by developing partnerships across organizations and disciplines\\n\\n## Senior Software Engineer\\n\\nJune 2021 &ndash; February 2022\\n\\n- Established and implemented an org-level micro-frontend architecture to enhance long-term scalability and improve developer onboarding, defect resolution time, and feature release cycles\\n- Built and maintained consumer-facing web applications processing $100K+ per month in revenue\\n- Ensured product stability and seamless releases by evolving and managing DevOps processes: CI/CD, vulnerability, defect and risk mitigation, production readiness & release strategizing, and on-call handling\\n\\n## Software Engineer\\n\\nJune 2020 &ndash; June 2021\\n\\n- Developed and guided the delivery of enterprise apps, increasing labor savings and ease of use\\n- Designed and documented processes to improve developer experience, efficiency, and accuracy\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Lowe's",
+            "resumeContent": "export const metadata = {\n  title: \"Experience | Lowe's\",\n  alternates: {\n    canonical: '/experience/lowes',\n  },\n};\n\n# Lowe&rsquo;s\n\nJune 2020 &ndash; Current (5 years)\n\nLowe's is a Fortune 50 home improvement retailer serving millions of customers across North America. The company leverages technology to drive innovation, streamline operations, and deliver seamless digital experiences for its customers and associates.\n\n## Lead Software Engineer\n\nFebruary 2022 &ndash; Current\n\n- Serve as product & project manager &mdash; strategizing, planning, and leading a cross-disciplinary team to deliver product and customer service excellence, business objective compliance, and leadership reporting\n- Build and maintain an enterprise design system (React component library, docs, plugins), increasing efficiency and enforcing brand and UI/UX standards compliance across 250+ apps\n- Create and deliver several key initiatives by developing partnerships across organizations and disciplines\n\n## Senior Software Engineer\n\nJune 2021 &ndash; February 2022\n\n- Established and implemented an org-level micro-frontend architecture to enhance long-term scalability and improve developer onboarding, defect resolution time, and feature release cycles\n- Built and maintained consumer-facing web applications processing $100K+ per month in revenue\n- Ensured product stability and seamless releases by evolving and managing DevOps processes: CI/CD, vulnerability, defect and risk mitigation, production readiness & release strategizing, and on-call handling\n\n## Software Engineer\n\nJune 2020 &ndash; June 2021\n\n- Developed and guided the delivery of enterprise apps, increasing labor savings and ease of use\n- Designed and documented processes to improve developer experience, efficiency, and accuracy\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_012Q8FhYNgtZoJz3rc1DsPvQ",
+        "state": "output-available",
+        "input": {
+          "companyName": "union"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Union\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | Union',\\n  alternates: {\\n    canonical: '/experience/union',\\n  },\\n};\\n\\n# Union\\n\\nJuly 2016 - May 2020\\n\\nWhen I worked there, Union was a creative agency specializing in web-based interactive brand experiences, digital marketing and SEO, videography and photography, and community engagement.\\n\\n## Tech Lead\\n\\nOctober 2018 - May 2020\\n\\n- Lead a team of front-end developers to deliver high-quality work aligned with client expectations\\n- Create and implement process improvements, risk mitigation plans, and overall technical vision\\n- Continue to develop interactive experiences, while focusing on larger team and company goals\\n\\n## Senior Frontend Developer\\n\\nJuly 2016 - October 2018\\n\\n- Develop interactive experiences leveraging the latest tools like React, WebGL, and Craft CMS\\n- Collaborate and communicate across disciplines and with partner agencies to achieve and exceed client goal\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Union",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | Union',\n  alternates: {\n    canonical: '/experience/union',\n  },\n};\n\n# Union\n\nJuly 2016 - May 2020\n\nWhen I worked there, Union was a creative agency specializing in web-based interactive brand experiences, digital marketing and SEO, videography and photography, and community engagement.\n\n## Tech Lead\n\nOctober 2018 - May 2020\n\n- Lead a team of front-end developers to deliver high-quality work aligned with client expectations\n- Create and implement process improvements, risk mitigation plans, and overall technical vision\n- Continue to develop interactive experiences, while focusing on larger team and company goals\n\n## Senior Frontend Developer\n\nJuly 2016 - October 2018\n\n- Develop interactive experiences leveraging the latest tools like React, WebGL, and Craft CMS\n- Collaborate and communicate across disciplines and with partner agencies to achieve and exceed client goal\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01HVELGbb6L8AMuHXccCyB2y",
+        "state": "output-available",
+        "input": {
+          "companyName": "struck"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Struck\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | Struck',\\n  alternates: {\\n    canonical: '/experience/struck',\\n  },\\n};\\n\\n# Struck\\n\\nSeptember 2013 - July 2016\\n\\nWhen I worked there, Struck was a creative agency specializing in digital marketing, interior design and experiences, branding, and web design and development. Clients included Lennar Homes, Utah Office of Tourism, Nickelodeon, Jack in the Box, Scottsdale Arizona, The Grand America Hotel, Glasses.com, and a few more I can no longer recall.\\n\\n## Front-End Developer\\n\\nSeptember 2013 - July 2016\\n\\n- Deliver key feature updates and perform maintenance on all Jack in the Box web properties, including an interactive \\\"Bork Blaster\\\" game for a Super Bowl amenity\\n- Helped architect and build 2016 struck.com website\\n- Provided web development recommendations and project guidelines\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Struck",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | Struck',\n  alternates: {\n    canonical: '/experience/struck',\n  },\n};\n\n# Struck\n\nSeptember 2013 - July 2016\n\nWhen I worked there, Struck was a creative agency specializing in digital marketing, interior design and experiences, branding, and web design and development. Clients included Lennar Homes, Utah Office of Tourism, Nickelodeon, Jack in the Box, Scottsdale Arizona, The Grand America Hotel, Glasses.com, and a few more I can no longer recall.\n\n## Front-End Developer\n\nSeptember 2013 - July 2016\n\n- Deliver key feature updates and perform maintenance on all Jack in the Box web properties, including an interactive \"Bork Blaster\" game for a Super Bowl amenity\n- Helped architect and build 2016 struck.com website\n- Provided web development recommendations and project guidelines\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01NkRaqkWF3p3mWs5hRQcc9F",
+        "state": "output-available",
+        "input": {
+          "companyName": "register-guard"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"The Register-Guard\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | The Register-Guard',\\n  alternates: {\\n    canonical: '/experience/the-register-guard',\\n  },\\n};\\n\\n# The Register-Guard\\n\\nApril 2011 - November 2013\\n\\nThe Register-Guard is Eugene-Springfield's go-to source for news about all of Lane County, Oregon and operates a newspaper and digital news site.\\n\\n## Digital Designer\\n\\nApril 2011 - November 2013\\n\\n- Front-end web development, web & graphic design\\n- Design, schedule, and manage delivery of online ad campaigns\\n- Created new internal ad submission, tracking, and implementation system\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "The Register-Guard",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | The Register-Guard',\n  alternates: {\n    canonical: '/experience/the-register-guard',\n  },\n};\n\n# The Register-Guard\n\nApril 2011 - November 2013\n\nThe Register-Guard is Eugene-Springfield's go-to source for news about all of Lane County, Oregon and operates a newspaper and digital news site.\n\n## Digital Designer\n\nApril 2011 - November 2013\n\n- Front-end web development, web & graphic design\n- Design, schedule, and manage delivery of online ad campaigns\n- Created new internal ad submission, tracking, and implementation system\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01H6tR9Kzk2kXvL2T7vWYuXW",
+        "state": "output-available",
+        "input": {
+          "companyName": "pac-12"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Pac-12 Conference\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | Pac-12 Conference',\\n  alternates: {\\n    canonical: '/experience/pac-12-conference',\\n  },\\n};\\n\\n# Pac-12 Conference\\n\\nOctober 2011 - October 2013\\n\\nThe Pac-12 Conference is a college athletic conference, once home my alma mater &mdash; The University of Oregon. The conference expanded from the Pac-12 to 12 teams in 2011.\\n\\n## Freelance Designer\\n\\nOctober 2011 - October 2013\\n\\n- PAC-12 Football Championship logo design\\n- Designed \\\"12\\\" numeral for PAC-12 logo\\n- PAC-12 Women's Basketball Championship logo design\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Pac-12 Conference",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | Pac-12 Conference',\n  alternates: {\n    canonical: '/experience/pac-12-conference',\n  },\n};\n\n# Pac-12 Conference\n\nOctober 2011 - October 2013\n\nThe Pac-12 Conference is a college athletic conference, once home my alma mater &mdash; The University of Oregon. The conference expanded from the Pac-12 to 12 teams in 2011.\n\n## Freelance Designer\n\nOctober 2011 - October 2013\n\n- PAC-12 Football Championship logo design\n- Designed \"12\" numeral for PAC-12 logo\n- PAC-12 Women's Basketball Championship logo design\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01J5jcdYypPCTgrvDebaJgSD",
+        "state": "output-available",
+        "input": {
+          "companyName": "university-of-oregon"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"University of Oregon\",\"resumeContent\":\"# University of Oregon\\n\\nSeptember 2006 - April 2011\\n\\nThe University of Oregon afforded many opportunities, including a web developer position at the Holden Leadership Center.\\n\\n## Part-Time Web Developer\\n\\n- Managed and updated all web content with a Content Management System and hand-coded HTML\\n- Develop new pages congruent to the Center&rsquo;s vision consisting of forms, tables, and basic web elements.\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "University of Oregon",
+            "resumeContent": "# University of Oregon\n\nSeptember 2006 - April 2011\n\nThe University of Oregon afforded many opportunities, including a web developer position at the Holden Leadership Center.\n\n## Part-Time Web Developer\n\n- Managed and updated all web content with a Content Management System and hand-coded HTML\n- Develop new pages congruent to the Center&rsquo;s vision consisting of forms, tables, and basic web elements.\n"
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Patrick has been working professionally for approximately **14 years** (since 2011). His career started with digital design and web development work at The Register-Guard in April 2011, and he's currently a Lead Software Engineer at Lowe's, where he's been since June 2020.",
+        "state": "done"
+      }
+    ]
+  }
+]

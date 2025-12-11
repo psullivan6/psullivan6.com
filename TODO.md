@@ -23,3 +23,4 @@
 - [ ] Add gibberish detection to the prompt and skip an API call and simply return an error with a path to retry if the user believes the prompt is real; include strings like "asdf " that will never pass
 - [ ] remove the chat message storage logic, since it's just for testing
 - [ ] expose the site preferences (light, dark, etc...) to the MCP ... ensure consumers using this MCP outside this site do not have access to these tools ... perhaps treat them as authenticated tools that my site's AI agent auths into
+- [ ] add a get-all-experience / get-resume tool that lists all the experience in sequential order

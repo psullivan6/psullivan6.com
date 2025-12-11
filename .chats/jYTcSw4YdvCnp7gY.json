@@ -1,0 +1,183 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-technical-skills",
+        "toolCallId": "toolu_01LTpGWWzFk4f331jTfx2joc",
+        "state": "output-available",
+        "input": {},
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "<h2 className=\"[column-span:all] [&]:mb-4\">Actively Using</h2>\n\n- Bitbucket\n- ChatGPT\n- Confluence\n- CoPilot AI\n- CSS (Vanilla CSS, Plain CSS)\n- date-fns\n- Docker\n- Drizzle ORM\n- ESlint\n- Figma (Design, Make, FigJam, etc...)\n- Git\n- HTML, JSX, TSX\n- Jest, React Testing Library\n- Jira\n- JSON\n- lodash\n- Markdown & MDX\n- Microsoft Teams, Outlook\n- Model Context Protocol (MCP)\n- Next.js\n- Node.js, npm\n- NX Monorepos\n- Playwright\n- PostgreSQL\n- Prettier\n- Radix UI\n- React\n- react-aria-components\n- recharts\n- Rollup\n- shadcn/ui\n- Storybook\n- Strapi\n- styled-components\n- Tailwind CSS\n- Tanstack (Start, Query, Router)\n- TypeScript, tsc\n- Vercel\n- Visual Studio Code IDE\n- Vite\n- Webpack & Module Federation\n- Windsurf IDE + Cascade AI\n- YAML\n- Zod\n\n<h2 className=\"[column-span:all] [&]:mb-4\">Used Recently</h2>\n\n- Apollo Server & Client\n- AWS (S3, EC2)\n- Axios\n- Backbone.js\n- Bootstrap\n- Contentful\n- create-react-app\n- Cypress\n- Electron\n- Express.js\n- Gatsby\n- GitHub Pages\n- Google Workspace (Gmail, Docs, Sheets, Drive)\n- GraphQL\n- GSAP\n- Gulp\n- Heroku\n- Husky\n- Jenkins\n- jQuery\n- Kafka\n- Keystone CMS\n- Mock Service Worker (MSW)\n- Module Federation / MFEs\n- MongoDB\n- Motion (Framer Motion)\n- Netlify\n- pnpm\n- Prisma\n- Puppeteer\n- React Router\n- Redis\n- Redux, Redux Toolkit (RTK)\n- Remix\n- SASS/SCSS\n- Selenium\n- Slack\n- Sublime IDE\n- Three.js + React Three Fiber\n- Trello\n- Vitest\n- WebGL\n- Yarn\n"
+            }
+          ],
+          "isError": false
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01HvkZiTRconf6pxyGP1rGWg",
+        "state": "output-available",
+        "input": {
+          "companyName": "lowes"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Lowe's\",\"resumeContent\":\"export const metadata = {\\n  title: \\\"Experience | Lowe's\\\",\\n  alternates: {\\n    canonical: '/experience/lowes',\\n  },\\n};\\n\\n# Lowe&rsquo;s\\n\\nJune 2020 &ndash; Current (5 years)\\n\\nLowe's is a Fortune 50 home improvement retailer serving millions of customers across North America. The company leverages technology to drive innovation, streamline operations, and deliver seamless digital experiences for its customers and associates.\\n\\n## Lead Software Engineer\\n\\nFebruary 2022 &ndash; Current\\n\\n- Serve as product & project manager &mdash; strategizing, planning, and leading a cross-disciplinary team to deliver product and customer service excellence, business objective compliance, and leadership reporting\\n- Build and maintain an enterprise design system (React component library, docs, plugins), increasing efficiency and enforcing brand and UI/UX standards compliance across 250+ apps\\n- Create and deliver several key initiatives by developing partnerships across organizations and disciplines\\n\\n## Senior Software Engineer\\n\\nJune 2021 &ndash; February 2022\\n\\n- Established and implemented an org-level micro-frontend architecture to enhance long-term scalability and improve developer onboarding, defect resolution time, and feature release cycles\\n- Built and maintained consumer-facing web applications processing $100K+ per month in revenue\\n- Ensured product stability and seamless releases by evolving and managing DevOps processes: CI/CD, vulnerability, defect and risk mitigation, production readiness & release strategizing, and on-call handling\\n\\n## Software Engineer\\n\\nJune 2020 &ndash; June 2021\\n\\n- Developed and guided the delivery of enterprise apps, increasing labor savings and ease of use\\n- Designed and documented processes to improve developer experience, efficiency, and accuracy\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Lowe's",
+            "resumeContent": "export const metadata = {\n  title: \"Experience | Lowe's\",\n  alternates: {\n    canonical: '/experience/lowes',\n  },\n};\n\n# Lowe&rsquo;s\n\nJune 2020 &ndash; Current (5 years)\n\nLowe's is a Fortune 50 home improvement retailer serving millions of customers across North America. The company leverages technology to drive innovation, streamline operations, and deliver seamless digital experiences for its customers and associates.\n\n## Lead Software Engineer\n\nFebruary 2022 &ndash; Current\n\n- Serve as product & project manager &mdash; strategizing, planning, and leading a cross-disciplinary team to deliver product and customer service excellence, business objective compliance, and leadership reporting\n- Build and maintain an enterprise design system (React component library, docs, plugins), increasing efficiency and enforcing brand and UI/UX standards compliance across 250+ apps\n- Create and deliver several key initiatives by developing partnerships across organizations and disciplines\n\n## Senior Software Engineer\n\nJune 2021 &ndash; February 2022\n\n- Established and implemented an org-level micro-frontend architecture to enhance long-term scalability and improve developer onboarding, defect resolution time, and feature release cycles\n- Built and maintained consumer-facing web applications processing $100K+ per month in revenue\n- Ensured product stability and seamless releases by evolving and managing DevOps processes: CI/CD, vulnerability, defect and risk mitigation, production readiness & release strategizing, and on-call handling\n\n## Software Engineer\n\nJune 2020 &ndash; June 2021\n\n- Developed and guided the delivery of enterprise apps, increasing labor savings and ease of use\n- Designed and documented processes to improve developer experience, efficiency, and accuracy\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_019Aj6MFHKPu1wpSbjtmXjf3",
+        "state": "output-available",
+        "input": {
+          "companyName": "union"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Union\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | Union',\\n  alternates: {\\n    canonical: '/experience/union',\\n  },\\n};\\n\\n# Union\\n\\nJuly 2016 - May 2020\\n\\nWhen I worked there, Union was a creative agency specializing in web-based interactive brand experiences, digital marketing and SEO, videography and photography, and community engagement.\\n\\n## Tech Lead\\n\\nOctober 2018 - May 2020\\n\\n- Lead a team of front-end developers to deliver high-quality work aligned with client expectations\\n- Create and implement process improvements, risk mitigation plans, and overall technical vision\\n- Continue to develop interactive experiences, while focusing on larger team and company goals\\n\\n## Senior Frontend Developer\\n\\nJuly 2016 - October 2018\\n\\n- Develop interactive experiences leveraging the latest tools like React, WebGL, and Craft CMS\\n- Collaborate and communicate across disciplines and with partner agencies to achieve and exceed client goal\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Union",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | Union',\n  alternates: {\n    canonical: '/experience/union',\n  },\n};\n\n# Union\n\nJuly 2016 - May 2020\n\nWhen I worked there, Union was a creative agency specializing in web-based interactive brand experiences, digital marketing and SEO, videography and photography, and community engagement.\n\n## Tech Lead\n\nOctober 2018 - May 2020\n\n- Lead a team of front-end developers to deliver high-quality work aligned with client expectations\n- Create and implement process improvements, risk mitigation plans, and overall technical vision\n- Continue to develop interactive experiences, while focusing on larger team and company goals\n\n## Senior Frontend Developer\n\nJuly 2016 - October 2018\n\n- Develop interactive experiences leveraging the latest tools like React, WebGL, and Craft CMS\n- Collaborate and communicate across disciplines and with partner agencies to achieve and exceed client goal\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01QRqpeWXCgwo58uxUqKRZzy",
+        "state": "output-available",
+        "input": {
+          "companyName": "struck"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Struck\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | Struck',\\n  alternates: {\\n    canonical: '/experience/struck',\\n  },\\n};\\n\\n# Struck\\n\\nSeptember 2013 - July 2016\\n\\nWhen I worked there, Struck was a creative agency specializing in digital marketing, interior design and experiences, branding, and web design and development. Clients included Lennar Homes, Utah Office of Tourism, Nickelodeon, Jack in the Box, Scottsdale Arizona, The Grand America Hotel, Glasses.com, and a few more I can no longer recall.\\n\\n## Front-End Developer\\n\\nSeptember 2013 - July 2016\\n\\n- Deliver key feature updates and perform maintenance on all Jack in the Box web properties, including an interactive \\\"Bork Blaster\\\" game for a Super Bowl amenity\\n- Helped architect and build 2016 struck.com website\\n- Provided web development recommendations and project guidelines\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Struck",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | Struck',\n  alternates: {\n    canonical: '/experience/struck',\n  },\n};\n\n# Struck\n\nSeptember 2013 - July 2016\n\nWhen I worked there, Struck was a creative agency specializing in digital marketing, interior design and experiences, branding, and web design and development. Clients included Lennar Homes, Utah Office of Tourism, Nickelodeon, Jack in the Box, Scottsdale Arizona, The Grand America Hotel, Glasses.com, and a few more I can no longer recall.\n\n## Front-End Developer\n\nSeptember 2013 - July 2016\n\n- Deliver key feature updates and perform maintenance on all Jack in the Box web properties, including an interactive \"Bork Blaster\" game for a Super Bowl amenity\n- Helped architect and build 2016 struck.com website\n- Provided web development recommendations and project guidelines\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01PUw5WkJe9cUwZfsSDHNK7A",
+        "state": "output-available",
+        "input": {
+          "companyName": "register-guard"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"The Register-Guard\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | The Register-Guard',\\n  alternates: {\\n    canonical: '/experience/the-register-guard',\\n  },\\n};\\n\\n# The Register-Guard\\n\\nApril 2011 - November 2013\\n\\nThe Register-Guard is Eugene-Springfield's go-to source for news about all of Lane County, Oregon and operates a newspaper and digital news site.\\n\\n## Digital Designer\\n\\nApril 2011 - November 2013\\n\\n- Front-end web development, web & graphic design\\n- Design, schedule, and manage delivery of online ad campaigns\\n- Created new internal ad submission, tracking, and implementation system\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "The Register-Guard",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | The Register-Guard',\n  alternates: {\n    canonical: '/experience/the-register-guard',\n  },\n};\n\n# The Register-Guard\n\nApril 2011 - November 2013\n\nThe Register-Guard is Eugene-Springfield's go-to source for news about all of Lane County, Oregon and operates a newspaper and digital news site.\n\n## Digital Designer\n\nApril 2011 - November 2013\n\n- Front-end web development, web & graphic design\n- Design, schedule, and manage delivery of online ad campaigns\n- Created new internal ad submission, tracking, and implementation system\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01An67X3Pd5JHnkM51vYk6sw",
+        "state": "output-available",
+        "input": {
+          "companyName": "pac-12"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Pac-12 Conference\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | Pac-12 Conference',\\n  alternates: {\\n    canonical: '/experience/pac-12-conference',\\n  },\\n};\\n\\n# Pac-12 Conference\\n\\nOctober 2011 - October 2013\\n\\nThe Pac-12 Conference is a college athletic conference, once home my alma mater &mdash; The University of Oregon. The conference expanded from the Pac-12 to 12 teams in 2011.\\n\\n## Freelance Designer\\n\\nOctober 2011 - October 2013\\n\\n- PAC-12 Football Championship logo design\\n- Designed \\\"12\\\" numeral for PAC-12 logo\\n- PAC-12 Women's Basketball Championship logo design\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Pac-12 Conference",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | Pac-12 Conference',\n  alternates: {\n    canonical: '/experience/pac-12-conference',\n  },\n};\n\n# Pac-12 Conference\n\nOctober 2011 - October 2013\n\nThe Pac-12 Conference is a college athletic conference, once home my alma mater &mdash; The University of Oregon. The conference expanded from the Pac-12 to 12 teams in 2011.\n\n## Freelance Designer\n\nOctober 2011 - October 2013\n\n- PAC-12 Football Championship logo design\n- Designed \"12\" numeral for PAC-12 logo\n- PAC-12 Women's Basketball Championship logo design\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_0133xvaKep7TGRa8xwBWDwF8",
+        "state": "output-available",
+        "input": {
+          "companyName": "university-of-oregon"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"University of Oregon\",\"resumeContent\":\"# University of Oregon\\n\\nSeptember 2006 - April 2011\\n\\nThe University of Oregon afforded many opportunities, including a web developer position at the Holden Leadership Center.\\n\\n## Part-Time Web Developer\\n\\n- Managed and updated all web content with a Content Management System and hand-coded HTML\\n- Develop new pages congruent to the Center&rsquo;s vision consisting of forms, tables, and basic web elements.\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "University of Oregon",
+            "resumeContent": "# University of Oregon\n\nSeptember 2006 - April 2011\n\nThe University of Oregon afforded many opportunities, including a web developer position at the Holden Leadership Center.\n\n## Part-Time Web Developer\n\n- Managed and updated all web content with a Content Management System and hand-coded HTML\n- Develop new pages congruent to the Center&rsquo;s vision consisting of forms, tables, and basic web elements.\n"
+          }
+        }
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-hiring-recommendation",
+        "toolCallId": "toolu_013FgUfTPMPMigbuS4SU3NBG",
+        "state": "output-available",
+        "input": {},
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "yes"
+            }
+          ],
+          "isError": false
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "# PATRICK SULLIVAN - Professional One-Sheet\n\n**Lead Software Engineer** | 14+ Years Experience | Frontend Architecture & Design Systems Expert\n\n---\n\n## CURRENT ROLE\n**Lowe's** - Lead Software Engineer (June 2020 - Present)\n- Leading enterprise design system serving 250+ applications across Fortune 50 retailer\n- Managing cross-disciplinary teams as product & project manager\n- Architected micro-frontend platform improving scalability and developer efficiency\n- Built consumer-facing apps processing $100K+ monthly revenue\n\n## CORE EXPERTISE\n**Frontend Leadership:** React ecosystem, TypeScript, Next.js, design systems, component libraries\n**Architecture:** Micro-frontends, module federation, NX monorepos, scalable application design\n**DevOps & Quality:** CI/CD, testing (Jest, Playwright, Cypress), production readiness, on-call management\n**Product Management:** Strategic planning, cross-org partnerships, stakeholder reporting, team leadership\n\n## CAREER PROGRESSION\n- **Lowe's** (5 years): Software Engineer → Senior → Lead\n- **Union** (4 years): Senior Frontend Developer → Tech Lead\n- **Struck** (3 years): Frontend Developer\n- **The Register-Guard** (2.5 years): Digital Designer\n\n## TECHNICAL STACK (Active)\nNext.js, React, TypeScript, Tailwind CSS, Radix UI, shadcn/ui, Storybook, Playwright, Jest, PostgreSQL, Drizzle ORM, Docker, Webpack Module Federation, NX Monorepos, Vercel, AI tools (ChatGPT, Copilot, MCP)\n\n## KEY ACHIEVEMENTS\n✓ Enterprise design system enforcing UI/UX standards across 250+ applications\n✓ Micro-frontend architecture reducing defect resolution time and accelerating releases\n✓ Process improvements increasing labor savings and developer efficiency\n✓ Multi-disciplinary team leadership delivering business objective compliance\n\n## RECOMMENDATION STATUS\n**✓ Highly Recommended for Hire**\n\n---\n\n*Contact available upon request | Portfolio & full details at psullivan.dev*",
+        "state": "done"
+      }
+    ]
+  }
+]

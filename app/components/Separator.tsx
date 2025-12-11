@@ -11,7 +11,7 @@ type SeparatorProps = ComponentPropsWithoutRef<'hr'>;
 const Separator = (props: SeparatorProps) => {
   return (
     <hr
-      className="[all:unset] [&&]:flex [&&]:justify-center after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mx-auto after:block after:color-prose"
+      className="h-auto border-none my-12 [&&]:flex [&&]:justify-center after:content-['._._\1F332_\1F3D4_\1F332_._.'] after:mx-auto after:block after:color-prose"
       {...props}
     />
   );

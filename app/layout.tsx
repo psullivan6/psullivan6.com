@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.className} bg-background scroll-smooth scroll-pt-30`}
+      className={`${inter.className} bg-background scroll-smooth scroll-pt-[71px]`}
       suppressHydrationWarning
     >
       <body className="antialiased">

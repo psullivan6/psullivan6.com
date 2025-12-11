@@ -1,0 +1,41 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01B9saQ94GqhGhq2VCfSCt9Q",
+        "state": "output-available",
+        "input": {
+          "companyName": "union"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Union\",\"resumeContent\":\"Experience content not found.\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Union",
+            "resumeContent": "Experience content not found."
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "I don't have specific information about roles at Union available in my current data. If you'd like to know more about my work experience, I can share details about my roles at other companies like Lowe's, Struck, Register Guard, Pac-12, or University of Oregon.",
+        "state": "done"
+      }
+    ]
+  }
+]

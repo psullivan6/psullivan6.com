@@ -1,0 +1,41 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01YXpKZU1fgEE1at25Y4BXb1",
+        "state": "output-available",
+        "input": {
+          "companyName": "pac-12"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Pac-12 Conference\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | Pac-12 Conference',\\n  alternates: {\\n    canonical: '/experience/pac-12-conference',\\n  },\\n};\\n\\n# Pac-12 Conference\\n\\nOctober 2011 - October 2013\\n\\nThe Pac-12 Conference is a college athletic conference, once home my alma mater &mdash; The University of Oregon. The conference expanded from the Pac-12 to 12 teams in 2011.\\n\\n## Freelance Designer\\n\\nOctober 2011 - October 2013\\n\\n- PAC-12 Football Championship logo design\\n- Designed \\\"12\\\" numeral for PAC-12 logo\\n- PAC-12 Women's Basketball Championship logo design\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Pac-12 Conference",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | Pac-12 Conference',\n  alternates: {\n    canonical: '/experience/pac-12-conference',\n  },\n};\n\n# Pac-12 Conference\n\nOctober 2011 - October 2013\n\nThe Pac-12 Conference is a college athletic conference, once home my alma mater &mdash; The University of Oregon. The conference expanded from the Pac-12 to 12 teams in 2011.\n\n## Freelance Designer\n\nOctober 2011 - October 2013\n\n- PAC-12 Football Championship logo design\n- Designed \"12\" numeral for PAC-12 logo\n- PAC-12 Women's Basketball Championship logo design\n"
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Yes! I worked as a **Freelance Designer** for the Pac-12 Conference from October 2011 to October 2013. During that time, I:\n\n- Designed the PAC-12 Football Championship logo\n- Designed the \"12\" numeral for the PAC-12 logo (during their expansion from 10 to 12 teams)\n- Designed the PAC-12 Women's Basketball Championship logo\n\nThis was around the time the conference expanded to include my alma mater, the University of Oregon.",
+        "state": "done"
+      }
+    ]
+  }
+]

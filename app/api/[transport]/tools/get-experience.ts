@@ -34,7 +34,7 @@ export const registerGetExperienceTool = (server: McpServer) => {
     ({ companyName }) => {
       let resumeContent;
       try {
-        resumeContent = getResourceContent({ filePath: `experience/${companyName}` });
+        resumeContent = getResourceContent({ filePath: `experience/${companyName}.mdx` });
       } catch (e) {
         resumeContent = 'Experience content not found.';
       }

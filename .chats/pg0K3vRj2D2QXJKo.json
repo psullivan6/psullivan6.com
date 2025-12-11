@@ -1,0 +1,41 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01AT3gBJ4ZznXQoGk1RLaDb5",
+        "state": "output-available",
+        "input": {
+          "companyName": "union"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"Union\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | Union',\\n  alternates: {\\n    canonical: '/experience/union',\\n  },\\n};\\n\\n# Union\\n\\nJuly 2016 - May 2020\\n\\nWhen I worked there, Union was a creative agency specializing in web-based interactive brand experiences, digital marketing and SEO, videography and photography, and community engagement.\\n\\n## Tech Lead\\n\\nOctober 2018 - May 2020\\n\\n- Lead a team of front-end developers to deliver high-quality work aligned with client expectations\\n- Create and implement process improvements, risk mitigation plans, and overall technical vision\\n- Continue to develop interactive experiences, while focusing on larger team and company goals\\n\\n## Senior Frontend Developer\\n\\nJuly 2016 - October 2018\\n\\n- Develop interactive experiences leveraging the latest tools like React, WebGL, and Craft CMS\\n- Collaborate and communicate across disciplines and with partner agencies to achieve and exceed client goal\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "Union",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | Union',\n  alternates: {\n    canonical: '/experience/union',\n  },\n};\n\n# Union\n\nJuly 2016 - May 2020\n\nWhen I worked there, Union was a creative agency specializing in web-based interactive brand experiences, digital marketing and SEO, videography and photography, and community engagement.\n\n## Tech Lead\n\nOctober 2018 - May 2020\n\n- Lead a team of front-end developers to deliver high-quality work aligned with client expectations\n- Create and implement process improvements, risk mitigation plans, and overall technical vision\n- Continue to develop interactive experiences, while focusing on larger team and company goals\n\n## Senior Frontend Developer\n\nJuly 2016 - October 2018\n\n- Develop interactive experiences leveraging the latest tools like React, WebGL, and Craft CMS\n- Collaborate and communicate across disciplines and with partner agencies to achieve and exceed client goal\n"
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "At Union (July 2016 - May 2020), I held two roles:\n\n**Tech Lead** (October 2018 - May 2020) - Led a team of front-end developers, created process improvements and risk mitigation plans, and shaped the overall technical vision.\n\n**Senior Frontend Developer** (July 2016 - October 2018) - Developed interactive experiences using React, WebGL, and Craft CMS while collaborating across disciplines and with partner agencies.",
+        "state": "done"
+      }
+    ]
+  }
+]

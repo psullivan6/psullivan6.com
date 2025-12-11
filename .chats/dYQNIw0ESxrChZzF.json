@@ -1,0 +1,41 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01FSdP6X9oqTVvvajd3xTGRB",
+        "state": "output-available",
+        "input": {
+          "companyName": "register-guard"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"The Register-Guard\",\"resumeContent\":\"Experience content not found.\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "The Register-Guard",
+            "resumeContent": "Experience content not found."
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "I don't have specific information about my role at The Register-Guard available right now. Would you like to know about my experience at any of the other companies I've worked for?",
+        "state": "done"
+      }
+    ]
+  }
+]

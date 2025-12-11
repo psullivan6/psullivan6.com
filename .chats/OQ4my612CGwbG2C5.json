@@ -1,0 +1,41 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-experience",
+        "toolCallId": "toolu_01Gb8RLkj8SZrcfrJr7R1Hwo",
+        "state": "output-available",
+        "input": {
+          "companyName": "register-guard"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"companyName\":\"The Register-Guard\",\"resumeContent\":\"export const metadata = {\\n  title: 'Experience | The Register-Guard',\\n  alternates: {\\n    canonical: '/experience/the-register-guard',\\n  },\\n};\\n\\n# The Register-Guard\\n\\nApril 2011 - November 2013\\n\\nThe Register-Guard is Eugene-Springfield's go-to source for news about all of Lane County, Oregon and operates a newspaper and digital news site.\\n\\n## Digital Designer\\n\\nApril 2011 - November 2013\\n\\n- Front-end web development, web & graphic design\\n- Design, schedule, and manage delivery of online ad campaigns\\n- Created new internal ad submission, tracking, and implementation system\\n\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "companyName": "The Register-Guard",
+            "resumeContent": "export const metadata = {\n  title: 'Experience | The Register-Guard',\n  alternates: {\n    canonical: '/experience/the-register-guard',\n  },\n};\n\n# The Register-Guard\n\nApril 2011 - November 2013\n\nThe Register-Guard is Eugene-Springfield's go-to source for news about all of Lane County, Oregon and operates a newspaper and digital news site.\n\n## Digital Designer\n\nApril 2011 - November 2013\n\n- Front-end web development, web & graphic design\n- Design, schedule, and manage delivery of online ad campaigns\n- Created new internal ad submission, tracking, and implementation system\n"
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "At The Register-Guard (April 2011 - November 2013), I worked as a **Digital Designer**. My responsibilities included front-end web development, web & graphic design, designing and managing online ad campaigns, and creating a new internal ad submission, tracking, and implementation system.",
+        "state": "done"
+      }
+    ]
+  }
+]

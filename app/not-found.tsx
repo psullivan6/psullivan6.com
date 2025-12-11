@@ -1,7 +1,6 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import fourOhFourContent from '@/content/404.json';
 import { Home } from 'lucide-react';
 import Link from 'next/link';
 import { useContentContext } from './components/ContentProvider/ContentProvider';
@@ -48,13 +47,13 @@ export default function NotFound() {
           </div>
 
           <h1 className="!text-[3em]/[1.1em] font-black text-center">
-            {fourOhFourContent[tone].title}
+            {tone === 'default' ? 'Page Not Found' : 'Stahp Trying to Hack Me'}
           </h1>
 
           <Button asChild className="mx-auto">
             <Link href="/" className="no-underline">
               <Home />
-              {fourOhFourContent[tone].button}
+              {tone === 'default' ? 'Return Home' : 'Get Outta Here'}
             </Link>
           </Button>
         </div>

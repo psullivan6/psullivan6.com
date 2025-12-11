@@ -17,7 +17,7 @@ const SeeMoreSection = ({ children, ...props }: SeeMoreSectionProps) => {
   return (
     <section
       className={cn(
-        `relative overflow-hidden transition-[max-height] duration-300`,
+        `relative overflow-hidden transition-[max-height] duration-600`,
         isOpen
           ? null
           : `before:content-[''] before:absolute before:inset-0 before:z-10 before:bg-linear-to-b before:from-background/30 before:to-background`,
