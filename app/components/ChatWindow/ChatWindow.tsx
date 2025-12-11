@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { cn } from '@/utilities/cn';
 import { useChat } from '@ai-sdk/react';
 import { X } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';

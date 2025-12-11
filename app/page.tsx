@@ -9,16 +9,19 @@ import EducationSnarky from './content/education-snarky.md';
 import Education from './content/education.mdx';
 
 // Experience
+import LowesSnarky from '@/content/experience/lowes-snarky.md';
 import Lowes from '@/content/experience/lowes.mdx';
 import Pac12Conference from '@/content/experience/pac-12.mdx';
 import TheRegisterGuard from '@/content/experience/register-guard.mdx';
 import Struck from '@/content/experience/struck.mdx';
+import UnionSnarky from '@/content/experience/union-snarky.md';
 import Union from '@/content/experience/union.mdx';
 import UofO from '@/content/experience/university-of-oregon.mdx';
 
 // Misc.
 import { components as sectionMdxComponents } from '@/content/mdx-components';
 import TechAndTools from '@/content/technologies.mdx';
+import { cn } from '@/utilities/cn';
 import { lato } from '@/utilities/fonts';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -27,7 +30,6 @@ import { useContentContext } from './components/ContentProvider/ContentProvider'
 import SeeMoreSection from './components/SeeMoreSection';
 import Separator from './components/Separator';
 import { Button } from './components/ui/button';
-import { cn } from './lib/utils';
 
 const HomePage = () => {
   const { tone } = useContentContext();
@@ -42,7 +44,7 @@ const HomePage = () => {
             dangerouslySetInnerHTML={{
               __html:
                 tone === 'snarky'
-                  ? 'I&rsquo;m here to make money and do cool shit.'
+                  ? 'I&rsquo;m here to make money and do cool 💩.'
                   : 'I&rsquo;m here to explore, learn, and build cool stuff.',
             }}
           />
@@ -84,7 +86,7 @@ const HomePage = () => {
         </section>
 
         {/* Experience Section */}
-        <section className="section">
+        <section className="section mb-24">
           <h2
             id="experience"
             dangerouslySetInnerHTML={{
@@ -92,47 +94,53 @@ const HomePage = () => {
             }}
           />
 
-          <section className="mb-24 group experience">
-            <div>
+          <div>
+            {tone === 'snarky' ? (
+              <LowesSnarky components={sectionMdxComponents} />
+            ) : (
               <Lowes components={sectionMdxComponents} />
-            </div>
+            )}
+          </div>
 
-            <Separator />
+          <Separator />
 
-            <div>
+          <div>
+            {tone === 'snarky' ? (
+              <UnionSnarky components={sectionMdxComponents} />
+            ) : (
               <Union components={sectionMdxComponents} />
+            )}
+          </div>
+
+          <Separator />
+
+          <div>
+            <Struck components={sectionMdxComponents} />
+          </div>
+
+          <Separator />
+
+          <SeeMoreSection>
+            <div>
+              <TheRegisterGuard components={sectionMdxComponents} />
             </div>
 
             <Separator />
 
             <div>
-              <Struck components={sectionMdxComponents} />
+              <Pac12Conference components={sectionMdxComponents} />
             </div>
 
             <Separator />
 
-            <SeeMoreSection>
-              <div>
-                <TheRegisterGuard components={sectionMdxComponents} />
-              </div>
-
-              <Separator />
-
-              <div>
-                <Pac12Conference components={sectionMdxComponents} />
-              </div>
-
-              <Separator />
-
-              <div>
-                <UofO components={sectionMdxComponents} />
-              </div>
-            </SeeMoreSection>
-          </section>
+            <div>
+              <UofO components={sectionMdxComponents} />
+            </div>
+          </SeeMoreSection>
         </section>
 
         {/* Education Section */}
-        <section id="education" className="section">
+        <section id="education" className="section mb-24">
           {tone === 'snarky' ? (
             <EducationSnarky components={sectionMdxComponents} />
           ) : (

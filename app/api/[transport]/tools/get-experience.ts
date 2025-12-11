@@ -1,15 +1,7 @@
 import { getResourceContent } from '@/utilities/get-resource-content';
 import type { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod/v4';
-
-const companyNameMap = {
-  lowes: "Lowe's",
-  union: 'Union',
-  struck: 'Struck',
-  'register-guard': 'The Register-Guard',
-  'pac-12': 'Pac-12 Conference',
-  'university-of-oregon': 'University of Oregon',
-} as const;
+import { companyNameMap } from './_utilities';
 
 export const registerGetExperienceTool = (server: McpServer) => {
   server.registerTool(

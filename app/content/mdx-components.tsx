@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { cn } from '@/utilities/cn';
 import { lato } from '@/utilities/fonts';
 import type { ComponentPropsWithoutRef } from 'react';
 

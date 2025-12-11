@@ -10,6 +10,7 @@ import { Kbd, KbdGroup } from '@/components/ui/kbd';
 import { useForm } from '@tanstack/react-form-nextjs';
 import { ArrowUp, LoaderCircle } from 'lucide-react';
 import { ComponentPropsWithRef, KeyboardEventHandler, useEffect, useRef } from 'react';
+import { useContentContext } from '../ContentProvider/ContentProvider';
 import './ChatPrompt.css?url';
 
 export type ChatPromptElement = HTMLDivElement;
@@ -21,6 +22,7 @@ export type ChatPromptProps = Omit<ComponentPropsWithRef<'div'>, 'onSubmit'> & {
 const ChatPrompt = ({ onSubmit, ref }: ChatPromptProps) => {
   const promptRef = useRef<HTMLTextAreaElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
+  const { tone } = useContentContext();
   const tsForm = useForm({
     defaultValues: {
       prompt: '',
@@ -76,7 +78,11 @@ const ChatPrompt = ({ onSubmit, ref }: ChatPromptProps) => {
             {(field) => (
               <InputGroupTextarea
                 ref={promptRef}
-                placeholder="Ask, Search or Chat..."
+                placeholder={
+                  tone === 'snarky'
+                    ? 'Ooooh! Fancy AI thing, lemme see ...'
+                    : 'Ask, Search or Chat...'
+                }
                 name={field.name}
                 value={field.state.value}
                 onBlur={field.handleBlur}

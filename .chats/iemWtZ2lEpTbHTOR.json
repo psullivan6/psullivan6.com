@@ -1,0 +1,35 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-technical-skills",
+        "toolCallId": "toolu_01LpxnDhRhdk21DrUzcHxyHF",
+        "state": "output-available",
+        "input": {},
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "<h2 className=\"[column-span:all] [&]:mb-4\">Actively Using</h2>\n\n- Bitbucket\n- ChatGPT\n- Confluence\n- CoPilot AI\n- CSS (Vanilla CSS, Plain CSS)\n- date-fns\n- Docker\n- Drizzle ORM\n- ESlint\n- Figma (Design, Make, FigJam, etc...)\n- Git\n- HTML, JSX, TSX\n- Jest, React Testing Library\n- Jira\n- JSON\n- lodash\n- Markdown & MDX\n- Microsoft Teams, Outlook\n- Model Context Protocol (MCP)\n- Next.js\n- Node.js, npm\n- NX Monorepos\n- Playwright\n- PostgreSQL\n- Prettier\n- Radix UI\n- React\n- react-aria-components\n- recharts\n- Rollup\n- shadcn/ui\n- Storybook\n- Strapi\n- styled-components\n- Tailwind CSS\n- Tanstack (Start, Query, Router)\n- TypeScript, tsc\n- Vercel\n- Visual Studio Code IDE\n- Vite\n- Webpack & Module Federation\n- Windsurf IDE + Cascade AI\n- YAML\n- Zod\n\n<h2 className=\"[column-span:all] [&]:mb-4\">Used Recently</h2>\n\n- Apollo Server & Client\n- AWS (S3, EC2)\n- Axios\n- Backbone.js\n- Bootstrap\n- Contentful\n- create-react-app\n- Cypress\n- Electron\n- Express.js\n- Gatsby\n- GitHub Pages\n- Google Workspace (Gmail, Docs, Sheets, Drive)\n- GraphQL\n- GSAP\n- Gulp\n- Heroku\n- Husky\n- Jenkins\n- jQuery\n- Kafka\n- Keystone CMS\n- Mock Service Worker (MSW)\n- Module Federation / MFEs\n- MongoDB\n- Motion (Framer Motion)\n- Netlify\n- pnpm\n- Prisma\n- Puppeteer\n- React Router\n- Redis\n- Redux, Redux Toolkit (RTK)\n- Remix\n- SASS/SCSS\n- Selenium\n- Slack\n- Sublime IDE\n- Three.js + React Three Fiber\n- Trello\n- Vitest\n- WebGL\n- Yarn\n"
+            }
+          ],
+          "isError": false
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Yes, absolutely! React is one of my core technologies. I'm **actively using** it in my current role at Lowe's, where I build and maintain an enterprise design system (React component library) and consumer-facing web applications.\n\nI've been working with React since my time at Union (2016-2020), where I developed interactive experiences. My React experience includes:\n\n- Building enterprise design systems and component libraries\n- Micro-frontend architecture with Module Federation\n- Next.js, Gatsby, and Remix frameworks\n- State management with Redux and Redux Toolkit\n- Testing with Jest and React Testing Library\n- Modern React patterns with TypeScript, hooks, and react-aria-components\n\nI also work with the broader React ecosystem including Radix UI, shadcn/ui, Storybook, React Router, and many other related tools.",
+        "state": "done"
+      }
+    ]
+  }
+]

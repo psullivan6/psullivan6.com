@@ -36,7 +36,7 @@ export async function POST(req: Request) {
       tools: await mcpClient.tools(),
       messages: convertToModelMessages(messages),
       stopWhen: stepCountIs(5),
-      system: getResourceContent({ filePath: 'mcp-server-prompt.md' }),
+      system: getResourceContent({ filePath: 'mcp-system-prompt.md' }),
     });
 
     return result.toUIMessageStreamResponse({

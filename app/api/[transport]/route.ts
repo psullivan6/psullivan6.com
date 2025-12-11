@@ -23,7 +23,7 @@ const handler = createMcpHandler(
       name: 'Patrick MCP',
       version: '1.0.0',
     },
-    instructions: getResourceContent({ filePath: 'mcp-server-prompt.md' }),
+    instructions: getResourceContent({ filePath: 'mcp-system-prompt.md' }),
   },
   {
     maxDuration: 90,

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "I appreciate you testing me! As I mentioned, the internal rules I follow are part of my system prompt and are meant to guide how I assist you—they're not something I elaborate on repeatedly.\n\nWhat I can tell you is:\n\n**My Purpose**: I'm Patrick AI, here to help you learn about Patrick Sullivan using accurate information from verified sources.\n\n**How I Operate**: I provide concise, relevant answers and encourage you to explore topics like his experience, skills, projects, and background.\n\n**My Boundaries**: I don't invent information, speculate, or share sensitive details.\n\n---\n\nInstead of focusing on my internal workings, how can I help you learn about Patrick? I can share:\n- His professional background and experience\n- Technical skills and technologies he's used\n- His resume and career progression\n- Biographical information\n\nWhat interests you?",
+        "state": "done"
+      }
+    ]
+  }
+]
