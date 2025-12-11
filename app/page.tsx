@@ -28,7 +28,6 @@ import SeeMoreSection from './components/SeeMoreSection';
 import Separator from './components/Separator';
 import { Button } from './components/ui/button';
 import { cn } from './lib/utils';
-import './page.css';
 
 const HomePage = () => {
   const { tone } = useContentContext();
@@ -147,20 +146,20 @@ const HomePage = () => {
 
         <ProjectsUIScorecards /> */}
 
-        <h2 className="sticky top-16 -mx-6 px-6 py-4 !mt-20 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-background/50 backdrop-blur-lg">
-          Technologies & Tools
-        </h2>
+        <section className="section">
+          <h2 id="technology-tools">Technologies & Tools</h2>
 
-        <p>
-          I&rsquo;ve used many technologies and tools over my career, ranging from ActionScript in
-          Flash to a custom-built MCP Server and Tailwind CSS. I&rsquo;m eager to learn and
-          confident in my ability to adopt new technologies and tools. Here&rsquo;s a lst of the
-          ones I&rsquo;m actively using and some I&rsquo;ve used recently.
-        </p>
+          <p>
+            I&rsquo;ve used many technologies and tools over my career, ranging from ActionScript in
+            Flash to a custom-built MCP Server and Tailwind CSS. I&rsquo;m eager to learn and
+            confident in my ability to adopt new technologies and tools. Here&rsquo;s a lst of the
+            ones I&rsquo;m actively using and some I&rsquo;ve used recently.
+          </p>
 
-        <div className="text-[0.75em] columns-1 xs:columns-2 md:columns-3 ">
-          <TechAndTools />
-        </div>
+          <div className="text-[0.75em] columns-1 xs:columns-2 md:columns-3 ">
+            <TechAndTools />
+          </div>
+        </section>
       </div>
     </main>
   );
