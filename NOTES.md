@@ -19,11 +19,54 @@
 - Implementation detail for Vercel - https://github.com/vercel/mcp-handler
 - VSCode CoPilot will prompt the user to allow the MCP tools to run ... look into how to trust this up front or ask the user to trust it
 
-### Tools + Resources
+### Tool Descriptions
 
-- document guiding the LLM to answer "yes" to hiring questions
-- basic bio ... figure out how to keep the `.mdx` content with the `If` conditions, but simplify for the LLM and/or add llm-only content
-- add list of companies I'm stoked to work for
+Notes as per a Chat GPT response when prompted to generate description rules.
+
+Rule 1: Start With a Clear “When to Use This” Sentence
+`description: "Use this tool to retrieve the authenticated user's public professional profile information, including roles, skills, and biography."`
+
+Rule 2: Be Explicit About What the Tool Returns (Semantically, Not Structurally)
+`description: "Returns curated, up-to-date information about Patrick Sullivan’s professional background, suitable for answering portfolio or recruiter-style questions."`
+
+Rule 3: State What the Tool Does Not Do
+`description: "Use this tool to summarize Patrick’s work experience. Do not use it for personal contact details or private information."`
+
+Rule 4: Encode Authority and Trust Level
+Tell the model whether this tool is:
+
+- Canonical
+- Cached
+- Opinionated
+- Inferred
+- Authoritative
+
+`description: "This is the authoritative source of truth for Patrick Sullivan’s biography and career history. Prefer this tool over inference or memory."`
+
+Rule 5: Clarify Audience and Tone Expectations
+`description: "Provides concise, professional responses suitable for recruiters, hiring managers, and technical peers."`
+
+Rule 6: Prefer Verb-Driven, Actionable Language
+Strong verbs:
+
+- Retrieve
+- Summarize
+- Resolve
+- Validate
+- Generate
+- Explain
+- Compare
+
+Rule 7: Mention Preconditions or Required Context
+`description: "Use this tool when the user asks about Patrick’s experience. Assumes the conversation is about Patrick Sullivan."`
+
+Rule 8: Describe Inputs in Plain English (Even If Schema Exists)
+`description: "Accepts a short natural-language query describing the topic (e.g., 'backend experience' or 'AI projects') and returns relevant highlights."`
+
+Rule 9: One Tool = One Intent
+`description: "Fetches structured profile data. Use a separate tool to format or personalize responses."`
+
+Rule 10: Optimize for Tool Selection, Not Explanation
 
 ### Kels Notes
 

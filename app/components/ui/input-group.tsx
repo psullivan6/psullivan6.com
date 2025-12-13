@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/utilities/cn';
+import { TextareaAutosize, TextareaAutosizeProps } from './textarea-resize';
 
 function InputGroup({ className, ...props }: React.ComponentProps<'div'>) {
   return (
@@ -148,6 +149,19 @@ function InputGroupTextarea({ className, ...props }: React.ComponentProps<'texta
   );
 }
 
+function InputGroupTextareaAutosize({ className, ...props }: TextareaAutosizeProps) {
+  return (
+    <TextareaAutosize
+      data-slot="input-group-control"
+      className={cn(
+        'flex-1 resize-none rounded-none border-0 bg-transparent py-3 shadow-none focus-visible:ring-0 dark:bg-transparent',
+        className
+      )}
+      {...props}
+    />
+  );
+}
+
 export {
   InputGroup,
   InputGroupAddon,
@@ -155,4 +169,5 @@ export {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
+  InputGroupTextareaAutosize,
 };

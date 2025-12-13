@@ -104,13 +104,13 @@ const ChatWindow = () => {
       >
         <div
           className={cn(
-            'flex flex-col max-w-prose mx-auto h-full transition-[padding] duration-300 py-4',
-            isOpen ? 'px-6' : 'px-12'
+            'flex flex-col mx-auto h-full transition-[max-w,padding] duration-300',
+            isOpen ? 'max-w-prose' : 'max-w-lg py-4'
           )}
         >
           {isOpen ? (
             <>
-              <header className="flex justify-end border-b pb-6 not-prose text-base lg:text-lg xl:text-xl items-center">
+              <header className="flex justify-end border-b px-6 py-4 not-prose text-base lg:text-lg xl:text-xl items-center">
                 <Button variant="outline" onClick={handleClose}>
                   Close <X />
                 </Button>
@@ -120,7 +120,11 @@ const ChatWindow = () => {
             </>
           ) : null}
 
-          <ChatPrompt ref={chatPromptRef} onSubmit={handlePromptSubmit} />
+          <ChatPrompt
+            className={cn(isOpen ? 'p-4' : null)}
+            ref={chatPromptRef}
+            onSubmit={handlePromptSubmit}
+          />
         </div>
       </div>
 

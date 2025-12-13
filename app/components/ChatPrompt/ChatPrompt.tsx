@@ -5,12 +5,15 @@ import {
   InputGroupAddon,
   InputGroupButton,
   InputGroupTextarea,
+  InputGroupTextareaAutosize,
 } from '@/components/ui/input-group';
 import { Kbd, KbdGroup } from '@/components/ui/kbd';
+import { cn } from '@/utilities/cn';
 import { useForm } from '@tanstack/react-form-nextjs';
 import { ArrowUp, LoaderCircle } from 'lucide-react';
 import { ComponentPropsWithRef, KeyboardEventHandler, useEffect, useRef } from 'react';
 import { useContentContext } from '../ContentProvider/ContentProvider';
+import { TextareaAutosize } from '../ui/textarea-resize';
 import './ChatPrompt.css?url';
 
 export type ChatPromptElement = HTMLDivElement;
@@ -19,7 +22,7 @@ export type ChatPromptProps = Omit<ComponentPropsWithRef<'div'>, 'onSubmit'> & {
   onSubmit: ({ prompt }: { prompt: string }) => void;
 };
 
-const ChatPrompt = ({ onSubmit, ref }: ChatPromptProps) => {
+const ChatPrompt = ({ className, onSubmit, ref }: ChatPromptProps) => {
   const promptRef = useRef<HTMLTextAreaElement | null>(null);
   const formRef = useRef<HTMLFormElement | null>(null);
   const { tone } = useContentContext();
@@ -58,7 +61,7 @@ const ChatPrompt = ({ onSubmit, ref }: ChatPromptProps) => {
   }, []);
 
   return (
-    <div ref={ref} className="w-full">
+    <div ref={ref} className={cn(className, 'w-full')}>
       <form
         ref={formRef}
         onSubmit={(e) => {
@@ -76,7 +79,9 @@ const ChatPrompt = ({ onSubmit, ref }: ChatPromptProps) => {
             }}
           >
             {(field) => (
-              <InputGroupTextarea
+              <InputGroupTextareaAutosize
+                minRows={1}
+                maxRows={6}
                 ref={promptRef}
                 placeholder={
                   tone === 'snarky'
@@ -86,7 +91,7 @@ const ChatPrompt = ({ onSubmit, ref }: ChatPromptProps) => {
                 name={field.name}
                 value={field.state.value}
                 onBlur={field.handleBlur}
-                className="z-10 px-5 max-h-40 overflow-auto"
+                className="resize-none z-10 px-5 after:content-[''] after:absolute after:inset-0 after:bg-red-200"
                 onChange={(e) => field.handleChange(e.target.value)}
                 onKeyDown={handleTextareaKeyDown}
               />

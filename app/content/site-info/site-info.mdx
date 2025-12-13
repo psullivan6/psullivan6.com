@@ -7,13 +7,17 @@ import todos from '../../../TODO.md';
 - Next.js v16
 - React v19
 - Tailwind CSS v4
-- shadcn UI components v3 (Radix and ai components)
+- shadcn UI components v3 (`radix` and `ai` components)
 - Tanstack Form v1
 - @modelcontextprotocol SDK v1
 
 ### Reasoning
 
-I chose Next.js since it's a mature, well-documented framework that easily supports Markdown and MDX rendering. I also like Tanstack Start, but it's intentionally unopinionated when it comes to Markdown and MDX, so I'd have to futz with remark and other tools, which is potentially worth it, but would slow me down more than I was willing.
+I chose Next.js since it handles `.mdx` well with minimal setup. The site content is almost all Markdown and MDX files, because:
+
+- they're easy to edit and keep up to date, which I struggle to do
+- they are easy for LLMs to read, so I can use the same content for the humans AND the bots
+- there's a basic constraint with the types of formatting, ensuring consistent content and prevents me from trying to do too many fancy things
 
 ## Future Ideas
 

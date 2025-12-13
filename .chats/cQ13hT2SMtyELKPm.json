@@ -1,0 +1,16 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "This site was built using modern web technologies Patrick actively works with:\n\n**Core Stack:**\n- **Next.js** - React framework\n- **TypeScript** - Type-safe development\n- **Tailwind CSS** - Styling\n- **Vercel** - Hosting & deployment\n\n**Unique Feature:**\n- **Model Context Protocol (MCP)** - Powers this AI chat interface you're using right now\n\n**Supporting Tools:**\n- Radix UI & shadcn/ui for accessible components\n- Markdown/MDX for content\n- Git & Bitbucket for version control\n\nThe site showcases Patrick's expertise in modern React development, AI integration, and thoughtful UI/UX design.\n\nWant to know more about the MCP implementation or Patrick's other projects?",
+        "state": "done"
+      }
+    ]
+  }
+]

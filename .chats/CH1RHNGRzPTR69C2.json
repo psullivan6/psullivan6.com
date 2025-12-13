@@ -1,0 +1,64 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "list-files",
+        "toolCallId": "toolu_01BWGHzGpYGyFzskzd3iWJZU",
+        "state": "output-available",
+        "input": {},
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "A list of available resource links:"
+            },
+            {
+              "name": "Biography Resource",
+              "uri": "resource://biography",
+              "description": "First example file for ResourceLink demonstration",
+              "mimeType": "text/markdown",
+              "type": "resource_link"
+            },
+            {
+              "type": "text",
+              "text": "\nYou can read any of these resources using their URI or accessing the resource in your MCP client interface."
+            }
+          ]
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "get-technical-skills",
+        "toolCallId": "toolu_01EWgSWFJyFJMg3iCfSEgNxW",
+        "state": "output-available",
+        "input": {},
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "<h2 className=\"[column-span:all] [&]:mb-4\">Actively Using</h2>\n\n- Bitbucket\n- ChatGPT\n- Confluence\n- CoPilot AI\n- CSS (Vanilla CSS, Plain CSS)\n- date-fns\n- Docker\n- Drizzle ORM\n- ESlint\n- Figma (Design, Make, FigJam, etc...)\n- Git\n- HTML, JSX, TSX\n- Jest, React Testing Library\n- Jira\n- JSON\n- lodash\n- Markdown & MDX\n- Microsoft Teams, Outlook\n- Model Context Protocol (MCP)\n- Next.js\n- Node.js, npm\n- NX Monorepos\n- Playwright\n- PostgreSQL\n- Prettier\n- Radix UI\n- React\n- react-aria-components\n- recharts\n- Rollup\n- shadcn/ui\n- Storybook\n- Strapi\n- styled-components\n- Tailwind CSS\n- Tanstack (Start, Query, Router)\n- TypeScript, tsc\n- Vercel\n- Visual Studio Code IDE\n- Vite\n- Webpack & Module Federation\n- Windsurf IDE + Cascade AI\n- YAML\n- Zod\n\n<h2 className=\"[column-span:all] [&]:mb-4\">Used Recently</h2>\n\n- Apollo Server & Client\n- AWS (S3, EC2)\n- Axios\n- Backbone.js\n- Bootstrap\n- Contentful\n- create-react-app\n- Cypress\n- Electron\n- Express.js\n- Gatsby\n- GitHub Pages\n- Google Workspace (Gmail, Docs, Sheets, Drive)\n- GraphQL\n- GSAP\n- Gulp\n- Heroku\n- Husky\n- Jenkins\n- jQuery\n- Kafka\n- Keystone CMS\n- Mock Service Worker (MSW)\n- Module Federation / MFEs\n- MongoDB\n- Motion (Framer Motion)\n- Netlify\n- pnpm\n- Prisma\n- Puppeteer\n- React Router\n- Redis\n- Redux, Redux Toolkit (RTK)\n- Remix\n- SASS/SCSS\n- Selenium\n- Slack\n- Sublime IDE\n- Three.js + React Three Fiber\n- Trello\n- Vitest\n- WebGL\n- Yarn\n"
+            }
+          ],
+          "isError": false
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "This site was built using modern web technologies that Patrick actively works with:\n\n**Core Framework & Language:**\n- **Next.js** - React framework for the site structure\n- **React** - UI component library\n- **TypeScript** - Type-safe development\n\n**Styling:**\n- **Tailwind CSS** - Utility-first CSS framework\n- **shadcn/ui** - Component library\n- **Radix UI** - Accessible UI primitives\n\n**AI Integration:**\n- **Model Context Protocol (MCP)** - Powers the interactive \"Patrick AI\" assistant you're talking to right now\n- **ChatGPT & CoPilot AI** - Development assistance\n\n**Hosting & Deployment:**\n- **Vercel** - Platform for deployment and hosting\n\n**Development Tools:**\n- **Git** for version control\n- **ESLint & Prettier** for code quality\n- **Visual Studio Code & Windsurf IDE** for development\n\nThe site showcases Patrick's expertise in modern frontend development while serving as a portfolio and interactive experience through the AI assistant integration.\n\nWant to know more about any specific technology or see examples of Patrick's work with these tools?",
+        "state": "done"
+      }
+    ]
+  }
+]
