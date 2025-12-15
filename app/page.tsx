@@ -23,6 +23,7 @@ import { components as sectionMdxComponents } from '@/content/mdx-components';
 import TechAndTools from '@/content/technologies.mdx';
 import { cn } from '@/utilities/cn';
 import { lato } from '@/utilities/fonts';
+import { FileUser } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import ChatWindow from './components/ChatWindow/ChatWindow';
@@ -56,6 +57,7 @@ const HomePage = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
+                <FileUser />
                 Resume
               </Link>
             </Button>

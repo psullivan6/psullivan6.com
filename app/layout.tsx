@@ -1,16 +1,14 @@
 import Header from '@/components/Header/Header';
 import { Toaster } from '@/components/ui/sonner';
+import { inter } from '@/utilities/fonts';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
 import type { ReactNode } from 'react';
 import ColorModeProvider from './components/ColorModeProvider/ColorModeProvider';
 import { ContentProvider } from './components/ContentProvider/ContentProvider';
 import Footer from './components/Footer/Footer';
 import './globals.css';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://psullivan6.com'),

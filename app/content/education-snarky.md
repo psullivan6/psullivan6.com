@@ -1,6 +1,6 @@
 ## Hi-er Edgumification
 
-# University of Drinking - Eugene
+# UC Eugene
 
 Go Ducks
 

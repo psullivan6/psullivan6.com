@@ -1,0 +1,43 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "set-site-preferences",
+        "toolCallId": "toolu_01FkvFwRPEf16w4rXNcoxFNT",
+        "state": "output-available",
+        "input": {
+          "theme": "system",
+          "tone": "snarky"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"theme\":\"system\",\"tone\":\"snarky\",\"messageType\":\"site-preferences\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "theme": "system",
+            "tone": "snarky",
+            "messageType": "site-preferences"
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Done! 🎭 Tone is now set to **snarky**. Hope you're ready for some attitude with your answers. What would you like to know?",
+        "state": "done"
+      }
+    ]
+  }
+]

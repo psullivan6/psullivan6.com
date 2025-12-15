@@ -1,0 +1,43 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "set-site-preferences",
+        "toolCallId": "toolu_01K5o2EQ8psoYS2JKfbcW4GW",
+        "state": "output-available",
+        "input": {
+          "theme": "system",
+          "tone": "snarky"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"theme\":\"system\",\"tone\":\"snarky\",\"messageType\":\"site-preferences\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "theme": "system",
+            "tone": "snarky",
+            "messageType": "site-preferences"
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Done! 🎭 \n\nYour site preferences have been updated to **snarky mode**. Hope you're ready for some attitude with your information.",
+        "state": "done"
+      }
+    ]
+  }
+]

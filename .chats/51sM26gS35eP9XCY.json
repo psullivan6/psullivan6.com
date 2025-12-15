@@ -1,0 +1,43 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "dynamic-tool",
+        "toolName": "set-site-preferences",
+        "toolCallId": "toolu_01DFdg2FhRd4pCZ4EjJGVxdM",
+        "state": "output-available",
+        "input": {
+          "theme": "system",
+          "tone": "snarky"
+        },
+        "output": {
+          "content": [
+            {
+              "type": "text",
+              "text": "{\"theme\":\"system\",\"tone\":\"snarky\",\"messageType\":\"site-preferences\"}"
+            }
+          ],
+          "isError": false,
+          "structuredContent": {
+            "theme": "system",
+            "tone": "snarky",
+            "messageType": "site-preferences"
+          }
+        }
+      },
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "Done! I've updated the site preferences to use snarky copy. The theme is set to follow your system preference (light/dark mode).\n\nNow you'll get responses with a bit more... personality. 😏",
+        "state": "done"
+      }
+    ]
+  }
+]

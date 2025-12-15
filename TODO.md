@@ -1,5 +1,18 @@
+# Feedback
+
+- resume wasn't easily found - make it more apparent and/or in other places as well (footer link??)
+
 # High
 
+- [ ] Fix broken AI prompts
+
+  - "Tell me about you"
+  - "What makes you different"
+  - "What's your best quality"
+  - "Tell me about an obstacle you overcame" -- case studies or projects tool??
+
+- [ ] Add snarky content for the rest of the jobs
+- [ ] Add open graph content for link previews - https://ogp.me/
 - [ ] Add info to the site-info document about the MCP Server and AI agent
 - [ ] Ensure the mcp client closes when the user is done
 - [ ] Change the prompt submit button to a stop icon when streaming data and add the abort logic to the server

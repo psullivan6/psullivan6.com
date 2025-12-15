@@ -17,4 +17,4 @@ July 2016 - October 2018
 
 - Did whatever my project manager told me
 - Did whatever my boss told me
-- Drank beers with co-workers after work
+- Hung out with co-workers after work
