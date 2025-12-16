@@ -9,7 +9,7 @@ export const registerGetResumeTool = (server: McpServer) => {
     {
       title: 'Get Resume Tool',
       description:
-        "Tool to assist in retrieving Patrick's resume content, including bio, experience, and education.",
+        "Use this tool to retrieve Patrick's resume content, including bio, experience, and education. Always include the direct URL to the PDF resume in the response.",
       inputSchema: z.object({}),
     },
     () => {
@@ -23,7 +23,7 @@ export const registerGetResumeTool = (server: McpServer) => {
         content: [
           {
             type: 'text',
-            text: `${bioContent}\n\n${experienceContent}\n\n${educationContent}`,
+            text: `https://www.psullivan6.com/Patrick%20Sullivan%20-%20Resume%202025.pdf\n\n${bioContent}\n\n${experienceContent}\n\n${educationContent}`,
           },
         ],
       };

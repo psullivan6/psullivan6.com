@@ -20,6 +20,13 @@ export const metadata: Metadata = {
     template: '%s | Patrick Sullivan',
   },
   description: 'Patrick Sullivan is a software engineer who loves building things with code.',
+  openGraph: {
+    title: 'Patrick Sullivan',
+    images: {
+      type: 'image/png',
+      url: 'https://psullivan6.com/og-card.png',
+    },
+  },
 };
 
 export default function RootLayout({
