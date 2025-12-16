@@ -7,9 +7,9 @@ export const registerGreetingTool = (server: McpServer) => {
     {
       title: 'Greeting Tool',
       description:
-        "Simple greeting tool to outline the MCP's capabilities and offer helpful guidance",
+        "Use this tool to greet the user, for instance on their first prompt. Use this tool if the user prompts 'hello,' 'hi,' or any other simple greeting. This tool returns a simple greeting, which outlines the MCP's capabilities and offers helpful guidance",
       inputSchema: {
-        name: z.string().describe('Name of person to greet'),
+        name: z.string().optional().describe('Name of person to greet'),
       },
       outputSchema: {
         salutation: z.string(),
@@ -19,7 +19,7 @@ export const registerGreetingTool = (server: McpServer) => {
     },
     async ({ name }) => {
       const output = {
-        salutation: `Hi ${name} 👋`,
+        salutation: name ? `Hi ${name} 👋` : `Hi 👋`,
         content: ["I'm Patrick AI, powered by the Patrick MCP", 'Ask me about real Patrick.'],
         suggestedFollowupTopics: [
           'professional experience',
