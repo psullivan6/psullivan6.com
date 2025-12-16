@@ -91,7 +91,7 @@ const ChatPrompt = ({ className, onSubmit, ref }: ChatPromptProps) => {
                 name={field.name}
                 value={field.state.value}
                 onBlur={field.handleBlur}
-                className="resize-none z-10 px-5 after:content-[''] after:absolute after:inset-0 after:bg-red-200"
+                className="resize-none z-10 px-5 text-base"
                 onChange={(e) => field.handleChange(e.target.value)}
                 onKeyDown={handleTextareaKeyDown}
               />
@@ -107,7 +107,7 @@ const ChatPrompt = ({ className, onSubmit, ref }: ChatPromptProps) => {
                   type="submit"
                   variant="default"
                   className="rounded-full"
-                  size="icon-xs"
+                  size="icon-sm"
                   disabled={!canSubmit || isPristine}
                 >
                   {isSubmitting ? <LoaderCircle className="animate-spin" /> : <ArrowUp />}
