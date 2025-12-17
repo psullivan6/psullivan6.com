@@ -20,7 +20,7 @@ Always return only the exact content the user needs at that moment, nothing more
 ## Example Prompts that use this MCP
 
 - "Ask Patrick ..."
-- "Hi Patrick ..."
+- "Hi"
 - "Hey Developer ..."
 
 ## Rules

@@ -50,7 +50,8 @@ const Header = () => {
       <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
         <DropdownMenuTrigger asChild>
           <Button variant="outline">
-            {headerContent[tone].menu} <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
+            {tone === 'snarky' ? 'Change Stuff' : 'Menu'}
+            <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
           </Button>
         </DropdownMenuTrigger>
 

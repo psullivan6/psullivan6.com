@@ -11,8 +11,6 @@
   - "What's your best quality"
   - "Tell me about an obstacle you overcame" -- case studies or projects tool??
 
-- [ ] Add snarky content for the rest of the jobs
-- [ ] Add open graph content for link previews - https://ogp.me/
 - [ ] Add info to the site-info document about the MCP Server and AI agent
 - [ ] Ensure the mcp client closes when the user is done
 - [ ] Change the prompt submit button to a stop icon when streaming data and add the abort logic to the server
@@ -26,6 +24,7 @@
 
 # Medium
 
+- [ ] Add a "report a bug" button or similar for the chat prompt
 - [ ] add list of companies I'm stoked to work for
 - [ ] expose the site preferences (light, dark, etc...) to the MCP ... ensure consumers using this MCP outside this site do not have access to these tools ... perhaps treat them as authenticated tools that my site's AI agent auths into
   - [ ] Add an option to "jump to" and list the sections, so `CMD + K` > Jump To > Education
@@ -52,3 +51,5 @@
   - either collapse several into 1 button to expand all ... OR ...
   - add expand/collapse for each job and just show the company name and time spent there ... leaning towards first option
 - [x] basic bio ... figure out how to keep the `.mdx` content with the `If` conditions, but simplify for the LLM and/or add llm-only content (opted to use separate files)
+- [x] Add open graph content for link previews - https://ogp.me/
+- [x] Add snarky content for the rest of the jobs

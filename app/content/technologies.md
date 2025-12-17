@@ -1,4 +1,9 @@
-<h2 className="[column-span:all] [&]:mb-4">Actively Using</h2>
+I&rsquo;ve used many technologies and tools over my career, ranging from ActionScript in
+Flash to a custom-built MCP Server and Tailwind CSS. I&rsquo;m eager to learn and
+confident in my ability to adopt new technologies and tools. Here&rsquo;s a lst of the
+ones I&rsquo;m actively using and some I&rsquo;ve used recently.
+
+### Actively Using
 
 - Bitbucket
 - ChatGPT
@@ -45,7 +50,7 @@
 - YAML
 - Zod
 
-<h2 className="[column-span:all] [&]:mb-4">Previously Used</h2>
+### Previously Used
 
 - Apollo Server & Client
 - AWS (S3, EC2)

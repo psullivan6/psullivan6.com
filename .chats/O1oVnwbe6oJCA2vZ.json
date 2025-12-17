@@ -1,0 +1,16 @@
+[
+  {
+    "id": "",
+    "role": "assistant",
+    "parts": [
+      {
+        "type": "step-start"
+      },
+      {
+        "type": "text",
+        "text": "I'm **Patrick AI**—a bot version of Patrick Sullivan built using cutting-edge AI technology.\n\nWhat makes me different from typical chatbots:\n\n**Powered by MCP (Model Context Protocol):**\n- I have direct access to Patrick's real resume, experience, and background through specialized tools\n- I don't make up information—I pull from verified sources\n\n**Purpose-built for Patrick:**\n- I'm designed specifically to help you learn about Patrick's skills, experience, and background\n- I can answer detailed questions about his work at Lowe's, Union, Struck, and more\n- I can provide hiring recommendations and technical skill breakdowns\n\n**Conversational & efficient:**\n- I give you exactly what you need—nothing more, nothing less\n- I encourage follow-up questions to dive deeper into what interests you\n\nWant to explore Patrick's technical skills, see his full resume, or learn about specific projects he's worked on?",
+        "state": "done"
+      }
+    ]
+  }
+]

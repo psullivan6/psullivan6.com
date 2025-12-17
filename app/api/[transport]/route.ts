@@ -21,7 +21,7 @@ const handler = createMcpHandler(
     },
     serverInfo: {
       name: 'Patrick MCP',
-      version: '1.0.0',
+      version: '1.1.0',
     },
     instructions: getResourceContent({ filePath: 'mcp-system-prompt.md' }),
   },

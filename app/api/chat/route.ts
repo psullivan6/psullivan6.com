@@ -1,4 +1,3 @@
-import { storeChat } from '@/components/AiDialogSection/messages-store';
 import { getResourceContent } from '@/utilities/get-resource-content';
 import { Ratelimit } from '@upstash/ratelimit';
 import { kv } from '@vercel/kv';
@@ -35,17 +34,11 @@ export async function POST(req: Request) {
       model: 'anthropic/claude-sonnet-4.5',
       tools: await mcpClient.tools(),
       messages: convertToModelMessages(messages),
-      stopWhen: stepCountIs(5),
+      stopWhen: stepCountIs(6),
       system: getResourceContent({ filePath: 'mcp-system-prompt.md' }),
     });
 
-    return result.toUIMessageStreamResponse({
-      onFinish: async ({ messages }) => {
-        const chatId = storeChat(messages);
-
-        console.log('chatId', chatId);
-      },
-    });
+    return result.toUIMessageStreamResponse();
   } catch (error) {
     return Response.json({ error });
   }

@@ -1,3 +1,27 @@
 .section > h2 {
-  @apply sticky top-[71px] -mx-6 my-0 px-6 py-4 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-background/50 backdrop-blur-lg;
+  @apply z-20 sticky top-[71px] -mx-6 my-0 px-6 py-4 font-mono !text-xs/6 font-medium tracking-widest uppercase text-sky-600 dark:text-sky-400 bg-background/50 backdrop-blur-lg;
+}
+
+/* =============================================================================
+ * Technologies Section
+ ============================================================================ */
+.technologies h3,
+.technologies p {
+  column-span: all;
+}
+
+.technologies h3 {
+  @apply mb-4;
+}
+
+.technologies p {
+  margin-top: 0;
+}
+
+.technologies ul {
+  font-size: 0.75em;
+}
+
+.technologies-list {
+  @apply columns-2 sm:columns-3;
 }

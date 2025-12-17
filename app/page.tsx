@@ -11,16 +11,23 @@ import Education from './content/education.mdx';
 // Experience
 import LowesSnarky from '@/content/experience/lowes-snarky.md';
 import Lowes from '@/content/experience/lowes.mdx';
+import Pac12ConferenceSnarky from '@/content/experience/pac-12-snarky.md';
 import Pac12Conference from '@/content/experience/pac-12.mdx';
+import TheRegisterGuardSnarky from '@/content/experience/register-guard-snarky.md';
 import TheRegisterGuard from '@/content/experience/register-guard.mdx';
+import StruckSnarky from '@/content/experience/struck-snarky.md';
 import Struck from '@/content/experience/struck.mdx';
 import UnionSnarky from '@/content/experience/union-snarky.md';
 import Union from '@/content/experience/union.mdx';
+import UofOSnarky from '@/content/experience/university-of-oregon-snarky.md';
 import UofO from '@/content/experience/university-of-oregon.mdx';
+
+// Technologies
+import TechAndToolsSnarky from '@/content/technologies-snarky.md';
+import TechAndTools from '@/content/technologies.md';
 
 // Misc.
 import { components as sectionMdxComponents } from '@/content/mdx-components';
-import TechAndTools from '@/content/technologies.mdx';
 import { cn } from '@/utilities/cn';
 import { lato } from '@/utilities/fonts';
 import { FileUser } from 'lucide-react';
@@ -117,26 +124,42 @@ const HomePage = () => {
           <Separator />
 
           <div>
-            <Struck components={sectionMdxComponents} />
+            {tone === 'snarky' ? (
+              <StruckSnarky components={sectionMdxComponents} />
+            ) : (
+              <Struck components={sectionMdxComponents} />
+            )}
           </div>
 
           <Separator />
 
           <SeeMoreSection>
             <div>
-              <TheRegisterGuard components={sectionMdxComponents} />
+              {tone === 'snarky' ? (
+                <TheRegisterGuardSnarky components={sectionMdxComponents} />
+              ) : (
+                <TheRegisterGuard components={sectionMdxComponents} />
+              )}
             </div>
 
             <Separator />
 
             <div>
-              <Pac12Conference components={sectionMdxComponents} />
+              {tone === 'snarky' ? (
+                <Pac12ConferenceSnarky components={sectionMdxComponents} />
+              ) : (
+                <Pac12Conference components={sectionMdxComponents} />
+              )}
             </div>
 
             <Separator />
 
             <div>
-              <UofO components={sectionMdxComponents} />
+              {tone === 'snarky' ? (
+                <UofOSnarky components={sectionMdxComponents} />
+              ) : (
+                <UofO components={sectionMdxComponents} />
+              )}
             </div>
           </SeeMoreSection>
         </section>
@@ -156,18 +179,11 @@ const HomePage = () => {
 
         <ProjectsUIScorecards /> */}
 
-        <section className="section">
+        <section className="section technologies">
           <h2 id="technology-tools">Technologies & Tools</h2>
 
-          <p>
-            I&rsquo;ve used many technologies and tools over my career, ranging from ActionScript in
-            Flash to a custom-built MCP Server and Tailwind CSS. I&rsquo;m eager to learn and
-            confident in my ability to adopt new technologies and tools. Here&rsquo;s a lst of the
-            ones I&rsquo;m actively using and some I&rsquo;ve used recently.
-          </p>
-
-          <div className="text-[0.75em] columns-1 xs:columns-2 md:columns-3 ">
-            <TechAndTools />
+          <div className="technologies-list">
+            {tone === 'snarky' ? <TechAndToolsSnarky /> : <TechAndTools />}
           </div>
         </section>
       </div>
