@@ -29,7 +29,7 @@ const handler = createMcpHandler(
     maxDuration: 90,
     basePath: '/api',
     verboseLogs: true,
-    redisUrl: process.env.REDIS_URL,
+    redisUrl: process.env.MCP_STORAGE_REDIS_URL,
   }
 );
 export { handler as GET, handler as POST };

@@ -1,5 +1,9 @@
 # Notes
 
+## Dependencies
+
+- AI chat relies on an Upstash Redis database; archives with lack of usage; named `psullivan6-mcp-redis-db`
+
 ## Tech Stack
 
 - chose Next.js since it handles `.mdx` well with minimal setup

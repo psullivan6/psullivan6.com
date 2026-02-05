@@ -5,7 +5,7 @@ import { convertToModelMessages, stepCountIs, streamText, UIMessage } from 'ai';
 import { mcpClient } from './mcp-client';
 
 export async function POST(req: Request) {
-  if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
+  if (process.env.MCP_STORAGE_KV_REST_API_URL && process.env.MCP_STORAGE_KV_REST_API_TOKEN) {
     const ip = req.headers.get('x-forwarded-for');
     const ratelimit = new Ratelimit({
       redis: kv,

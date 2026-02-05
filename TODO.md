@@ -4,7 +4,8 @@
 
 # High
 
-- [ ] Fix broken AI prompts
+- [ ] Revise the job experience section to copy my resume content and be more problem solved oriented vs. just the projects listed
+- [?] Fix broken AI prompts
 
   - "Tell me about you"
   - "What makes you different"
