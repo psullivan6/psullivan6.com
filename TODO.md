@@ -4,9 +4,10 @@
 
 # High
 
+- [x] Figure out why the chat isn't working; issue with the API gateway?
+- [ ] Ensure consistent uptime and limited cold starts; perhaps upgrade to Pro?
 - [ ] Revise the job experience section to copy my resume content and be more problem solved oriented vs. just the projects listed
 - [?] Fix broken AI prompts
-
   - "Tell me about you"
   - "What makes you different"
   - "What's your best quality"
@@ -25,6 +26,7 @@
 
 # Medium
 
+- [ ] Figure out why the rate limiting server response error message doesn't show in the UI toast message when a chat message is sent and limited; can reproduce by renaming the KV\_ env variables to something else, so it fails
 - [ ] Add a "report a bug" button or similar for the chat prompt
 - [ ] add list of companies I'm stoked to work for
 - [ ] expose the site preferences (light, dark, etc...) to the MCP ... ensure consumers using this MCP outside this site do not have access to these tools ... perhaps treat them as authenticated tools that my site's AI agent auths into
