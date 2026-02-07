@@ -17,7 +17,9 @@ const ChatWindow = () => {
   const { messages, sendMessage, regenerate, status } = useChat({
     onError: (err) => {
       toast.error(
-        err.message ?? 'There was an error making the chat bot request; please try again later.'
+        err.message != null && err.message !== ''
+          ? err.message
+          : 'There was an error making the chat bot request; please try again later.'
       );
     },
   });
