@@ -1,14 +1,16 @@
 import { getResourceContent } from '@/utilities/get-resource-content';
 import { Ratelimit } from '@upstash/ratelimit';
-import { kv } from '@vercel/kv';
 import { convertToModelMessages, stepCountIs, streamText, UIMessage } from 'ai';
 import { mcpClient } from './mcp-client';
+import { Redis } from '@upstash/redis';
+
+const redis = Redis.fromEnv();
 
 export async function POST(req: Request) {
   if (process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN) {
     const ip = req.headers.get('x-forwarded-for');
     const ratelimit = new Ratelimit({
-      redis: kv,
+      redis,
       // rate limit to 5 requests per 10 seconds
       limiter: Ratelimit.slidingWindow(5, '10s'),
     });
@@ -17,7 +19,7 @@ export async function POST(req: Request) {
 
     // TODO - this error message isn't sent to the client; why not?!?
     if (!success) {
-      return new Response('You have reached your request limit for the day.', {
+      return new Response('You have reached your request limit. Please try again later.', {
         status: 429,
         headers: {
           'X-RateLimit-Limit': limit.toString(),
